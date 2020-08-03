@@ -1,4 +1,4 @@
-// 定义外部库空间
+#定义外部库空间
 new_local_repository(
     name = "usr",
     path = "/usr",

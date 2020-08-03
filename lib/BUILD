@@ -1,6 +1,6 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
 
-// 定义库
+# 定义库
 cc_library(
     name = "user_service",
     srcs = ["user_service.cc","user_dao.cc","mysql_connect.cc"],
