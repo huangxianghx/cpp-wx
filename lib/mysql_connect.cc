@@ -18,7 +18,7 @@ void initMysqlConnect(MYSQL *mysql) {
     // 建立mysql连接
     mysql_real_connect(
             mysql,
-            "localhost",
+            "47.107.147.126",
             "root",
             "root",
             "test",
