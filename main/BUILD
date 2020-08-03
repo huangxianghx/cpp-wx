@@ -1,11 +1,13 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 
+// 引入依赖包
 cc_library(
     name = "user_service",
     srcs = ["user_service.cc","user_dao.cc","mysql_connect.cc"],
     hdrs = ["user_service.h","user_dao.h","mysql_connect.h"],
 )
 
+// 定义server执行程序
 cc_binary(
     name = "server",
     srcs = ["server.cc"],
@@ -14,6 +16,7 @@ cc_binary(
     ],
 )
 
+// 定义client执行程序
 cc_binary(
     name = "client",
     srcs = ["client.cc"],

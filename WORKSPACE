@@ -1,5 +1,6 @@
+// 定义外部库空间
 new_local_repository(
-    name = "mysql",
+    name = "usr",
     path = "/usr",
-    build_file = "mysql.BUILD"
+    build_file = "usr.BUILD"
 )

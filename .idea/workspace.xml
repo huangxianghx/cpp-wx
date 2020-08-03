@@ -29,7 +29,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/mysql_connect.cc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mysql_connect.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WORKSPACE" beforeDir="false" afterPath="$PROJECT_DIR$/WORKSPACE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BUILD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/main/BUILD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql.BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/usr.BUILD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="280000" />
+      <workItem from="1596458649256" duration="823000" />
     </task>
     <servers />
   </component>
@@ -84,5 +87,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="385" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1596459559769">
+      <screen x="0" y="23" width="1440" height="826" />
+    </state>
+    <state x="385" y="173" width="670" height="676" key="search.everywhere.popup/0.23.1440.826/-789.-1417.2560.1417@0.23.1440.826" timestamp="1596459559769" />
   </component>
 </project>
