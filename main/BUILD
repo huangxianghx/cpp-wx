@@ -21,3 +21,21 @@ cc_binary(
     name = "client",
     srcs = ["client.cc"],
 )
+
+# 定义grpcServer执行程序
+cc_binary(
+    name = "grpcServer",
+    srcs = ["grpcServer.cc"],
+    deps = [
+        "//apis:hello_service",
+    ],
+)
+
+# 定义grpcClient执行程序
+cc_binary(
+    name = "grpcClient",
+    srcs = ["grpcClient.cc"],
+    deps = [
+            "//apis:hello_service",
+    ],
+)

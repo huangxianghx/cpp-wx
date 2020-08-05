@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package protocol.hello.v1;
+
+// Hello Request
+message HelloReq {
+    string name = 1;
+}
+
+// Hello Response
+message HelloResp {
+    string message = 1;
+}
+
+// Hello API
+service HelloAPI {
+    rpc sayHello(HelloReq) returns (HelloResp){}
+}
+
