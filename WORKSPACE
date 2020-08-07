@@ -5,6 +5,9 @@ new_local_repository(
     build_file = "usr.BUILD"
 )
 
+# 声明http_archive
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
 # grpc Release v1.30.2
 http_archive(
     name = "com_github_grpc_grpc",
