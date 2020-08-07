@@ -64,7 +64,7 @@ int main() {
         RunServer();
     }
     catch(const exception& e){
-        cout << e.what << endl;
+        cout << e.what() << endl;
     }
 }
 
