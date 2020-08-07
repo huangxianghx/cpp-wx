@@ -10,7 +10,7 @@
 #include<unistd.h>
 #include<iostream>
 #include <grpcpp/grpcpp.h>
-#include "../apis/hello.grpc.pb.h"
+#include "apis/hello.grpc.pb.h"
 
 
 using namespace std;

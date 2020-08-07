@@ -27,7 +27,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="" />
+    <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/grpcClient.cc" beforeDir="false" afterPath="$PROJECT_DIR$/main/grpcClient.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/grpcServer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/main/grpcServer.cc" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apis/cpp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apis" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
@@ -64,6 +68,7 @@
       <recent name="$PROJECT_DIR$/apis" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apis" />
       <recent name="$PROJECT_DIR$/apis/cpp" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/proto" />
@@ -79,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="11743000" />
+      <workItem from="1596458649256" duration="12191000" />
     </task>
     <servers />
   </component>
