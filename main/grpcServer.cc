@@ -9,6 +9,7 @@
 #include<arpa/inet.h>
 #include<unistd.h>
 #include<iostream>
+#include <exception>
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/ext/proto_server_reflection_plugin.h>
 #include "apis/hello.grpc.pb.h"
@@ -58,8 +59,13 @@ void RunServer() {
 }
 
 int main() {
-    // 启动grpc服务端
-    RunServer();
+    try{
+        // 启动grpc服务端
+        RunServer();
+    }
+    catch(const exception& e){
+        cout << e.what << endl;
+    }
 }
 
 
