@@ -39,7 +39,7 @@ class HelloServiceImpl final : public HelloAPI::Service {
 };
 
 void RunServer() {
-    std::string server_address("0.0.0.0:50051");
+    std::string server_address("47.107.147.126:50051");
     HelloServiceImpl service;
 
     grpc::EnableDefaultHealthCheckService(true);
