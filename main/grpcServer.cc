@@ -27,7 +27,7 @@ int socket_fd;
 
 // Logic and data behind the server's behavior.
 class HelloServiceImpl final : public HelloAPI::Service {
-    Status SayHello(ServerContext* context, const HelloReq* request,
+    Status sayHello(ServerContext* context, const HelloReq* request,
                     HelloResp* reply) override {
         std::string prefix("Hello ");
         reply->set_message(prefix + request->name());

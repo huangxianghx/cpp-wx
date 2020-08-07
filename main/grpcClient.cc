@@ -36,7 +36,7 @@ public:
 
     // Assembles the client's payload, sends it and presents the response back
     // from the server.
-    std::string SayHello(const std::string& user) {
+    std::string sayHello(const std::string& user) {
         // Data we are sending to the server.
         HelloReq request;
         request.set_name(user);
@@ -49,7 +49,7 @@ public:
         ClientContext context;
 
         // The actual RPC.
-        Status status = stub_->SayHello(&context, request, &reply);
+        Status status = stub_->sayHello(&context, request, &reply);
 
         // Act upon its status.
         if (status.ok()) {
@@ -72,6 +72,6 @@ int main() {
     HelloClient hello(grpc::CreateChannel(
             target_str, grpc::InsecureChannelCredentials()));
     std::string user("world");
-    std::string reply = hello.SayHello(user);
+    std::string reply = hello.sayHello(user);
     std::cout << "Hello received: " << reply << std::endl;
 }
