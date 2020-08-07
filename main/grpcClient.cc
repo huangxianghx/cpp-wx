@@ -12,7 +12,9 @@
 #include<arpa/inet.h>
 #include<unistd.h>
 #include<iostream>
+#include <grpcpp/grpcpp.h>
 #include "../apis/hello.pb.h"
+
 
 using namespace std;
 using grpc::Channel;
