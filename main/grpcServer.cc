@@ -61,8 +61,10 @@ void RunServer() {
 
 int main() {
     try{
+        cout<< "run grpc server begin" << endl;
         // 启动grpc服务端
         RunServer();
+        cout<< "run grpc server end" << endl;
     }
     catch(const exception& e){
         cout << e.what() << endl;
