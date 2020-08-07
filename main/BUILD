@@ -28,6 +28,7 @@ cc_binary(
     srcs = ["grpcServer.cc"],
     deps = [
         "//apis:hello_service",
+        "@usr//:grpc_build",
     ],
 )
 
@@ -37,5 +38,6 @@ cc_binary(
     srcs = ["grpcClient.cc"],
     deps = [
             "//apis:hello_service",
+            "@usr//:grpc_build",
     ],
 )
