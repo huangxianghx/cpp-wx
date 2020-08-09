@@ -14,24 +14,25 @@
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/health_check_service_interface.h>
 #include <grpcpp/ext/proto_server_reflection_plugin.h>
-#include "apis/hello.grpc.pb.h"
+
+#include "apis/helloworld.grpc.pb.h"
 
 
 using grpc::Server;
 using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
-using protocol::hello::v1::HelloReq;
-using protocol::hello::v1::HelloResp;
-using protocol::hello::v1::HelloAPI;
+using protocol::hello::v1::HelloRequest;
+using protocol::hello::v1::HelloReply;
+using protocol::hello::v1::Greeter;
 
 int socket_fd;
 
 
 // Logic and data behind the server's behavior.
-class HelloServiceImpl final : public HelloAPI::Service {
-    Status sayHello(ServerContext *context, const HelloReq *request,
-                    HelloResp *reply) override {
+class GreeterServiceImpl final : public Greeter::Service {
+    Status SayHello(ServerContext *context, const HelloRequest *request,
+                    HelloReply *reply) override {
         std::string prefix("Hello ");
         reply->set_message(prefix + request->name());
         return Status::OK;
@@ -40,7 +41,7 @@ class HelloServiceImpl final : public HelloAPI::Service {
 
 void RunServer() {
     std::string server_address("47.107.147.126:50051");
-    HelloServiceImpl service;
+    GreeterServiceImpl service;
     std::cout << "1.define server_address、service" << std::endl;
 
     grpc::EnableDefaultHealthCheckService(true);
