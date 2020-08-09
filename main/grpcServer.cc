@@ -59,9 +59,14 @@ void RunServer() {
     builder.RegisterService(&service);
     cout << "5. register service" << endl;
 
-    // Finally assemble the server.
-    std::unique_ptr<Server> server(builder.BuildAndStart());
-    cout << "6. define unique_ptr" << endl;
+    try{
+        // Finally assemble the server.
+        std::unique_ptr<Server> server(builder.BuildAndStart());
+        cout << "6. define unique_ptr" << endl;
+    }
+    catch(const exception& e){
+        cout << e.what() << endl;
+    }
 
     std::cout << "Server listening on " << server_address << std::endl;
     // Wait for the server to shutdown. Note that some other thread must be
