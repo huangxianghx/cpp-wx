@@ -17,3 +17,11 @@ cc_library(
     includes = ["local/include/grpc"],
     visibility = ["//visibility:public"]
 )
+
+cc_library(
+    name = "proto_build",
+    srcs = glob(["local/lib/*.so"]),
+    hdrs = glob(["local/include/google/protobuf/**"]),
+    includes = ["local/include/google/protobuf"],
+    visibility = ["//visibility:public"]
+)
