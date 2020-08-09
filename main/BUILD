@@ -7,6 +7,13 @@ cc_library(
     hdrs = ["user_service.h","user_dao.h","mysql_connect.h"],
 )
 
+# 引入依赖包
+cc_library(
+    name = "hello_service",
+    srcs = ["helloworld.pb.cc","helloworld.grpc.pb.cc"],
+    hdrs = ["helloworld.pb.h","helloworld.grpc.pb.h"],
+)
+
 # 定义server执行程序
 cc_binary(
     name = "server",

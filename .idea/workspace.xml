@@ -28,6 +28,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/main/BUILD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/grpcServer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/main/grpcServer.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +65,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main" />
       <recent name="$PROJECT_DIR$/apis" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -83,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="21069000" />
+      <workItem from="1596458649256" duration="21384000" />
     </task>
     <servers />
   </component>
