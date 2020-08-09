@@ -1,16 +1,10 @@
 //
 // Created by 黄湘 on 2020/7/25.
 //
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<sys/socket.h>
-#include<netinet/in.h>
-#include<arpa/inet.h>
-#include<unistd.h>
 #include<iostream>
 #include <memory>
-#include <exception>
+#include <string>
+
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/health_check_service_interface.h>
 #include <grpcpp/ext/proto_server_reflection_plugin.h>
@@ -25,8 +19,6 @@ using grpc::Status;
 using protocol::hello::v1::HelloRequest;
 using protocol::hello::v1::HelloReply;
 using protocol::hello::v1::Greeter;
-
-int socket_fd;
 
 
 // Logic and data behind the server's behavior.
