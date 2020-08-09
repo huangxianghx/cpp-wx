@@ -40,30 +40,35 @@ class HelloServiceImpl final : public HelloAPI::Service {
 
 void RunServer() {
     std::string server_address("47.107.147.126:50051");
-    GreeterServiceImpl service;
+    HelloServiceImpl service;
+    cout << "1.define server_address、service" << endl;
 
-    std::cout << "1.define server_address、service" << endl;
     grpc::EnableDefaultHealthCheckService(true);
-    std::cout << "2.enable health check service" << endl;
+    cout << "2. health check" << endl;
+
     grpc::reflection::InitProtoReflectionServerBuilderPlugin();
-    std::cout << "3.init proto reflection server" << endl;
+    cout << "3. init server builder" << endl;
+
     ServerBuilder builder;
-    std::cout << "4.define serverBuilder" << endl;
     // Listen on the given address without any authentication mechanism.
     builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
-    std::cout << "5.builder add listening port" << endl;
+    cout << "4. listening port" << endl;
+
     // Register "service" as the instance through which we'll communicate with
     // clients. In this case it corresponds to an *synchronous* service.
     builder.RegisterService(&service);
-    cout << "6.builder register service" << endl;
+    cout << "5. register service" << endl;
+
     // Finally assemble the server.
     std::unique_ptr<Server> server(builder.BuildAndStart());
-    std::cout << "5.define unique_prt server" << endl;
+    cout << "6. define unique_ptr" << endl;
+
     std::cout << "Server listening on " << server_address << std::endl;
     // Wait for the server to shutdown. Note that some other thread must be
     // responsible for shutting down the server for this call to ever return.
     server->Wait();
-    std::cout << "6.waiting for client" << endl;
+    cout << "7. waiting connecting" << endl;
+
 }
 
 int main() {
