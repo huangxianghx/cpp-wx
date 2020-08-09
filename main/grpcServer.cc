@@ -41,33 +41,33 @@ class HelloServiceImpl final : public HelloAPI::Service {
 void RunServer() {
     std::string server_address("47.107.147.126:50051");
     HelloServiceImpl service;
-    std::cout << "1.define server_address、service" << endl;
+    std::cout << "1.define server_address、service" << std::endl;
 
     grpc::EnableDefaultHealthCheckService(true);
-    std::cout << "2. health check" << endl;
+    std::cout << "2. health check" << std::endl;
 
     grpc::reflection::InitProtoReflectionServerBuilderPlugin();
-    std::cout << "3. init server builder" << endl;
+    std::cout << "3. init server builder" << std::endl;
 
     ServerBuilder builder;
     // Listen on the given address without any authentication mechanism.
     builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
-    std::cout << "4. listening port" << endl;
+    std::cout << "4. listening port" << std::endl;
 
     // Register "service" as the instance through which we'll communicate with
     // clients. In this case it corresponds to an *synchronous* service.
     builder.RegisterService(&service);
-    std::cout << "5. register service" << endl;
+    std::cout << "5. register service" << std::endl;
 
     // Finally assemble the server.
     std::unique_ptr <Server> server(builder.BuildAndStart());
-    std::cout << "6. define unique_ptr" << endl;
+    std::cout << "6. define unique_ptr" << std::endl;
 
     std::cout << "Server listening on " << server_address << std::endl;
     // Wait for the server to shutdown. Note that some other thread must be
     // responsible for shutting down the server for this call to ever return.
     server->Wait();
-    std::cout << "7. waiting connecting" << endl;
+    std::cout << "7. waiting connecting" << std::endl;
 
 }
 
