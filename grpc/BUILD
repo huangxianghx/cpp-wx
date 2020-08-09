@@ -1,8 +1,24 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 
-# 定义grpcServer执行程序
+proto_library(
+    name = "helloworld_proto",
+    srcs = ["helloworld.proto"],
+)
+
+cc_grpc_library(
+    name = "helloworld_cc_grpc",
+    srcs = [":helloworld_proto"],
+    grpc_only = True,
+    deps = [":helloworld_cc_proto"],
+)
+
 cc_binary(
     name = "grpcServer",
-    srcs = ["grpcServer.cc","helloworld.pb.cc","helloworld.grpc.pb.cc"],
-     deps = ["@usr//:grpc_build","@usr//:proto_build",],
+    srcs = ["grpcServer.cc"],
+    defines = ["BAZEL_BUILD"],
+    deps = [
+        ":helloworld_cc_grpc",
+        "//:grpc++",
+        "//:grpc++_reflection",
+    ],
 )
