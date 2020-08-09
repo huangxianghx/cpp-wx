@@ -3,8 +3,8 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 # 引入依赖包
 cc_library(
     name = "user_service",
-    srcs = ["user_service.cc","user_dao.cc","mysql_connect.cc","helloworld.pb.cc","helloworld.grpc.pb.cc"],
-    hdrs = ["user_service.h","user_dao.h","mysql_connect.h","helloworld.pb.h","helloworld.grpc.pb.h"],
+    srcs = ["user_service.cc","user_dao.cc","mysql_connect.cc"],
+    hdrs = ["user_service.h","user_dao.h","mysql_connect.h"],
 )
 
 # 定义server执行程序
@@ -25,7 +25,7 @@ cc_binary(
 # 定义grpcServer执行程序
 cc_binary(
     name = "grpcServer",
-    srcs = ["grpcServer.cc"],
+    srcs = ["grpcServer.cc",,"helloworld.pb.cc","helloworld.grpc.pb.cc"],
     deps = [
         "@usr//:grpc_build",
     ],
