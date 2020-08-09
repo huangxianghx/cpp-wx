@@ -4,7 +4,5 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 cc_binary(
     name = "grpcServer",
     srcs = ["grpcServer.cc","helloworld.pb.cc","helloworld.grpc.pb.cc"],
-    deps = [
-        "//apis:hello_service",
-    ],
+     deps = ["@usr//:grpc_build","@usr//:proto_build",],
 )
