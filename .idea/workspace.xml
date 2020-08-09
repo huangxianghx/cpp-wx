@@ -28,8 +28,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/grpcServer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/main/grpcServer.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/helloworld.grpc.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/helloworld.grpc.pb.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/helloworld.grpc.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/helloworld.grpc.pb.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/helloworld.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/helloworld.pb.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/helloworld.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/helloworld.pb.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/grpcServer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/grpcServer.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +69,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grpc" />
       <recent name="$PROJECT_DIR$/main" />
       <recent name="$PROJECT_DIR$/apis" />
     </key>
@@ -85,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="21789000" />
+      <workItem from="1596458649256" duration="22195000" />
     </task>
     <servers />
   </component>
@@ -130,10 +136,10 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="458" y="190" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.827@0.23.1440.827" timestamp="1596968502553" />
-    <state x="100" y="123" width="1240" height="626" key="DiffContextDialog" timestamp="1596971519902">
+    <state x="100" y="123" width="1240" height="626" key="DiffContextDialog" timestamp="1596971613727">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="100" y="123" width="1240" height="626" key="DiffContextDialog/0.23.1440.827@0.23.1440.827" timestamp="1596971519902" />
+    <state x="100" y="123" width="1240" height="626" key="DiffContextDialog/0.23.1440.827@0.23.1440.827" timestamp="1596971613727" />
     <state x="229" y="75" key="SettingsEditor" timestamp="1596785491730">
       <screen x="0" y="23" width="1440" height="827" />
     </state>

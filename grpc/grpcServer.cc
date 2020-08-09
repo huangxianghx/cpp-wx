@@ -4,7 +4,6 @@
 #include<iostream>
 #include <memory>
 #include <string>
-#include <exception>
 
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/health_check_service_interface.h>
@@ -45,16 +44,12 @@ void RunServer() {
     // clients. In this case it corresponds to an *synchronous* service.
     builder.RegisterService(&service);
     // Finally assemble the server.
-    try {
-        std::unique_ptr<Server> server(builder.BuildAndStart());
-        std::cout << "Server listening on " << server_address << std::endl;
+    std::unique_ptr<Server> server(builder.BuildAndStart());
+    std::cout << "Server listening on " << server_address << std::endl;
 
-        // Wait for the server to shutdown. Note that some other thread must be
-        // responsible for shutting down the server for this call to ever return.
-        server->Wait();
-    }catch(const exception& e){
-        cout << e.what() << endl;
-    }
+    // Wait for the server to shutdown. Note that some other thread must be
+    // responsible for shutting down the server for this call to ever return.
+    server->Wait();
 }
 
 int main(int argc, char** argv) {
