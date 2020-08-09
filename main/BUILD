@@ -27,7 +27,7 @@ cc_binary(
     name = "grpcServer",
     srcs = ["grpcServer.cc","helloworld.pb.cc","helloworld.grpc.pb.cc"],
     deps = [
-        "@usr//:grpc_build",
+        "@usr//:grpc_build","helloworld.pb.h","helloworld.grpc.pb.h"
     ],
 )
 
