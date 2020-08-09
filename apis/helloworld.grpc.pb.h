@@ -26,42 +26,40 @@
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
 
-namespace protocol {
-namespace hello {
-namespace v1 {
+namespace helloworld {
 
 // The greeting service definition.
 class Greeter final {
  public:
   static constexpr char const* service_full_name() {
-    return "protocol.hello.v1.Greeter";
+    return "helloworld.Greeter";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
     // Sends a greeting
-    virtual ::grpc::Status SayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::protocol::hello::v1::HelloReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::protocol::hello::v1::HelloReply>> AsyncSayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::protocol::hello::v1::HelloReply>>(AsyncSayHelloRaw(context, request, cq));
+    virtual ::grpc::Status SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::helloworld::HelloReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::HelloReply>> AsyncSayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::HelloReply>>(AsyncSayHelloRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::protocol::hello::v1::HelloReply>> PrepareAsyncSayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::protocol::hello::v1::HelloReply>>(PrepareAsyncSayHelloRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::HelloReply>> PrepareAsyncSayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::HelloReply>>(PrepareAsyncSayHelloRaw(context, request, cq));
     }
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
       // Sends a greeting
-      virtual void SayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest* request, ::protocol::hello::v1::HelloReply* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::protocol::hello::v1::HelloReply* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::helloworld::HelloReply* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void SayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest* request, ::protocol::hello::v1::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void SayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest* request, ::protocol::hello::v1::HelloReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::protocol::hello::v1::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::helloworld::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::protocol::hello::v1::HelloReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::helloworld::HelloReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
     };
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -72,33 +70,33 @@ class Greeter final {
     #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::protocol::hello::v1::HelloReply>* AsyncSayHelloRaw(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::protocol::hello::v1::HelloReply>* PrepareAsyncSayHelloRaw(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::HelloReply>* AsyncSayHelloRaw(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::HelloReply>* PrepareAsyncSayHelloRaw(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status SayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::protocol::hello::v1::HelloReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::protocol::hello::v1::HelloReply>> AsyncSayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::protocol::hello::v1::HelloReply>>(AsyncSayHelloRaw(context, request, cq));
+    ::grpc::Status SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::helloworld::HelloReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::HelloReply>> AsyncSayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::HelloReply>>(AsyncSayHelloRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::protocol::hello::v1::HelloReply>> PrepareAsyncSayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::protocol::hello::v1::HelloReply>>(PrepareAsyncSayHelloRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::HelloReply>> PrepareAsyncSayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::HelloReply>>(PrepareAsyncSayHelloRaw(context, request, cq));
     }
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
-      void SayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest* request, ::protocol::hello::v1::HelloReply* response, std::function<void(::grpc::Status)>) override;
-      void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::protocol::hello::v1::HelloReply* response, std::function<void(::grpc::Status)>) override;
+      void SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response, std::function<void(::grpc::Status)>) override;
+      void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::helloworld::HelloReply* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void SayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest* request, ::protocol::hello::v1::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void SayHello(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest* request, ::protocol::hello::v1::HelloReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::protocol::hello::v1::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::helloworld::HelloReply* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::protocol::hello::v1::HelloReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void SayHello(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::helloworld::HelloReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
      private:
       friend class Stub;
@@ -111,8 +109,8 @@ class Greeter final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class experimental_async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::protocol::hello::v1::HelloReply>* AsyncSayHelloRaw(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::protocol::hello::v1::HelloReply>* PrepareAsyncSayHelloRaw(::grpc::ClientContext* context, const ::protocol::hello::v1::HelloRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::helloworld::HelloReply>* AsyncSayHelloRaw(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::helloworld::HelloReply>* PrepareAsyncSayHelloRaw(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_SayHello_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -122,7 +120,7 @@ class Greeter final {
     Service();
     virtual ~Service();
     // Sends a greeting
-    virtual ::grpc::Status SayHello(::grpc::ServerContext* context, const ::protocol::hello::v1::HelloRequest* request, ::protocol::hello::v1::HelloReply* response);
+    virtual ::grpc::Status SayHello(::grpc::ServerContext* context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_SayHello : public BaseClass {
@@ -136,11 +134,11 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::protocol::hello::v1::HelloRequest* /*request*/, ::protocol::hello::v1::HelloReply* /*response*/) override {
+    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::helloworld::HelloRequest* /*request*/, ::helloworld::HelloReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSayHello(::grpc::ServerContext* context, ::protocol::hello::v1::HelloRequest* request, ::grpc::ServerAsyncResponseWriter< ::protocol::hello::v1::HelloReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSayHello(::grpc::ServerContext* context, ::helloworld::HelloRequest* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::HelloReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -157,38 +155,38 @@ class Greeter final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::protocol::hello::v1::HelloRequest, ::protocol::hello::v1::HelloReply>(
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::helloworld::HelloRequest, ::helloworld::HelloReply>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::protocol::hello::v1::HelloRequest* request, ::protocol::hello::v1::HelloReply* response) { return this->SayHello(context, request, response); }));}
+                     context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response) { return this->SayHello(context, request, response); }));}
     void SetMessageAllocatorFor_SayHello(
-        ::grpc::experimental::MessageAllocator< ::protocol::hello::v1::HelloRequest, ::protocol::hello::v1::HelloReply>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::helloworld::HelloRequest, ::helloworld::HelloReply>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::protocol::hello::v1::HelloRequest, ::protocol::hello::v1::HelloReply>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::helloworld::HelloRequest, ::helloworld::HelloReply>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SayHello() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::protocol::hello::v1::HelloRequest* /*request*/, ::protocol::hello::v1::HelloReply* /*response*/) override {
+    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::helloworld::HelloRequest* /*request*/, ::helloworld::HelloReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* SayHello(
-      ::grpc::CallbackServerContext* /*context*/, const ::protocol::hello::v1::HelloRequest* /*request*/, ::protocol::hello::v1::HelloReply* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::helloworld::HelloRequest* /*request*/, ::helloworld::HelloReply* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* SayHello(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::protocol::hello::v1::HelloRequest* /*request*/, ::protocol::hello::v1::HelloReply* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::helloworld::HelloRequest* /*request*/, ::helloworld::HelloReply* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -209,7 +207,7 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::protocol::hello::v1::HelloRequest* /*request*/, ::protocol::hello::v1::HelloReply* /*response*/) override {
+    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::helloworld::HelloRequest* /*request*/, ::helloworld::HelloReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -226,7 +224,7 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::protocol::hello::v1::HelloRequest* /*request*/, ::protocol::hello::v1::HelloReply* /*response*/) override {
+    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::helloworld::HelloRequest* /*request*/, ::helloworld::HelloReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -259,7 +257,7 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::protocol::hello::v1::HelloRequest* /*request*/, ::protocol::hello::v1::HelloReply* /*response*/) override {
+    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::helloworld::HelloRequest* /*request*/, ::helloworld::HelloReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -280,10 +278,10 @@ class Greeter final {
     WithStreamedUnaryMethod_SayHello() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::protocol::hello::v1::HelloRequest, ::protocol::hello::v1::HelloReply>(
+          ::helloworld::HelloRequest, ::helloworld::HelloReply>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::protocol::hello::v1::HelloRequest, ::protocol::hello::v1::HelloReply>* streamer) {
+                     ::helloworld::HelloRequest, ::helloworld::HelloReply>* streamer) {
                        return this->StreamedSayHello(context,
                          streamer);
                   }));
@@ -292,21 +290,19 @@ class Greeter final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::protocol::hello::v1::HelloRequest* /*request*/, ::protocol::hello::v1::HelloReply* /*response*/) override {
+    ::grpc::Status SayHello(::grpc::ServerContext* /*context*/, const ::helloworld::HelloRequest* /*request*/, ::helloworld::HelloReply* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedSayHello(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::protocol::hello::v1::HelloRequest,::protocol::hello::v1::HelloReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedSayHello(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::helloworld::HelloRequest,::helloworld::HelloReply>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_SayHello<Service > StreamedUnaryService;
   typedef Service SplitStreamedService;
   typedef WithStreamedUnaryMethod_SayHello<Service > StreamedService;
 };
 
-}  // namespace v1
-}  // namespace hello
-}  // namespace protocol
+}  // namespace helloworld
 
 
 #endif  // GRPC_helloworld_2eproto__INCLUDED

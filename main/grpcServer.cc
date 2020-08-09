@@ -16,9 +16,9 @@ using grpc::Server;
 using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
-using protocol::hello::v1::HelloRequest;
-using protocol::hello::v1::HelloReply;
-using protocol::hello::v1::Greeter;
+using helloworld::HelloRequest;
+using helloworld::HelloReply;
+using helloworld::Greeter;
 
 
 // Logic and data behind the server's behavior.

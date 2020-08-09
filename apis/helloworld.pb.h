@@ -54,30 +54,24 @@ struct TableStruct_helloworld_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_helloworld_2eproto;
-namespace protocol {
-namespace hello {
-namespace v1 {
+namespace helloworld {
 class HelloReply;
 class HelloReplyDefaultTypeInternal;
 extern HelloReplyDefaultTypeInternal _HelloReply_default_instance_;
 class HelloRequest;
 class HelloRequestDefaultTypeInternal;
 extern HelloRequestDefaultTypeInternal _HelloRequest_default_instance_;
-}  // namespace v1
-}  // namespace hello
-}  // namespace protocol
+}  // namespace helloworld
 PROTOBUF_NAMESPACE_OPEN
-template<> ::protocol::hello::v1::HelloReply* Arena::CreateMaybeMessage<::protocol::hello::v1::HelloReply>(Arena*);
-template<> ::protocol::hello::v1::HelloRequest* Arena::CreateMaybeMessage<::protocol::hello::v1::HelloRequest>(Arena*);
+template<> ::helloworld::HelloReply* Arena::CreateMaybeMessage<::helloworld::HelloReply>(Arena*);
+template<> ::helloworld::HelloRequest* Arena::CreateMaybeMessage<::helloworld::HelloRequest>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace protocol {
-namespace hello {
-namespace v1 {
+namespace helloworld {
 
 // ===================================================================
 
 class HelloRequest PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protocol.hello.v1.HelloRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:helloworld.HelloRequest) */ {
  public:
   inline HelloRequest() : HelloRequest(nullptr) {}
   virtual ~HelloRequest();
@@ -166,7 +160,7 @@ class HelloRequest PROTOBUF_FINAL :
   void InternalSwap(HelloRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protocol.hello.v1.HelloRequest";
+    return "helloworld.HelloRequest";
   }
   protected:
   explicit HelloRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -207,7 +201,7 @@ class HelloRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_name();
   public:
 
-  // @@protoc_insertion_point(class_scope:protocol.hello.v1.HelloRequest)
+  // @@protoc_insertion_point(class_scope:helloworld.HelloRequest)
  private:
   class _Internal;
 
@@ -221,7 +215,7 @@ class HelloRequest PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class HelloReply PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protocol.hello.v1.HelloReply) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:helloworld.HelloReply) */ {
  public:
   inline HelloReply() : HelloReply(nullptr) {}
   virtual ~HelloReply();
@@ -310,7 +304,7 @@ class HelloReply PROTOBUF_FINAL :
   void InternalSwap(HelloReply* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protocol.hello.v1.HelloReply";
+    return "helloworld.HelloReply";
   }
   protected:
   explicit HelloReply(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -351,7 +345,7 @@ class HelloReply PROTOBUF_FINAL :
   std::string* _internal_mutable_message();
   public:
 
-  // @@protoc_insertion_point(class_scope:protocol.hello.v1.HelloReply)
+  // @@protoc_insertion_point(class_scope:helloworld.HelloReply)
  private:
   class _Internal;
 
@@ -378,15 +372,15 @@ inline void HelloRequest::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& HelloRequest::name() const {
-  // @@protoc_insertion_point(field_get:protocol.hello.v1.HelloRequest.name)
+  // @@protoc_insertion_point(field_get:helloworld.HelloRequest.name)
   return _internal_name();
 }
 inline void HelloRequest::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:protocol.hello.v1.HelloRequest.name)
+  // @@protoc_insertion_point(field_set:helloworld.HelloRequest.name)
 }
 inline std::string* HelloRequest::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:protocol.hello.v1.HelloRequest.name)
+  // @@protoc_insertion_point(field_mutable:helloworld.HelloRequest.name)
   return _internal_mutable_name();
 }
 inline const std::string& HelloRequest::_internal_name() const {
@@ -400,28 +394,28 @@ inline void HelloRequest::set_name(std::string&& value) {
   
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:protocol.hello.v1.HelloRequest.name)
+  // @@protoc_insertion_point(field_set_rvalue:helloworld.HelloRequest.name)
 }
 inline void HelloRequest::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:protocol.hello.v1.HelloRequest.name)
+  // @@protoc_insertion_point(field_set_char:helloworld.HelloRequest.name)
 }
 inline void HelloRequest::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:protocol.hello.v1.HelloRequest.name)
+  // @@protoc_insertion_point(field_set_pointer:helloworld.HelloRequest.name)
 }
 inline std::string* HelloRequest::_internal_mutable_name() {
   
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* HelloRequest::release_name() {
-  // @@protoc_insertion_point(field_release:protocol.hello.v1.HelloRequest.name)
+  // @@protoc_insertion_point(field_release:helloworld.HelloRequest.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void HelloRequest::set_allocated_name(std::string* name) {
@@ -432,7 +426,7 @@ inline void HelloRequest::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:protocol.hello.v1.HelloRequest.name)
+  // @@protoc_insertion_point(field_set_allocated:helloworld.HelloRequest.name)
 }
 
 // -------------------------------------------------------------------
@@ -444,15 +438,15 @@ inline void HelloReply::clear_message() {
   message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& HelloReply::message() const {
-  // @@protoc_insertion_point(field_get:protocol.hello.v1.HelloReply.message)
+  // @@protoc_insertion_point(field_get:helloworld.HelloReply.message)
   return _internal_message();
 }
 inline void HelloReply::set_message(const std::string& value) {
   _internal_set_message(value);
-  // @@protoc_insertion_point(field_set:protocol.hello.v1.HelloReply.message)
+  // @@protoc_insertion_point(field_set:helloworld.HelloReply.message)
 }
 inline std::string* HelloReply::mutable_message() {
-  // @@protoc_insertion_point(field_mutable:protocol.hello.v1.HelloReply.message)
+  // @@protoc_insertion_point(field_mutable:helloworld.HelloReply.message)
   return _internal_mutable_message();
 }
 inline const std::string& HelloReply::_internal_message() const {
@@ -466,28 +460,28 @@ inline void HelloReply::set_message(std::string&& value) {
   
   message_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:protocol.hello.v1.HelloReply.message)
+  // @@protoc_insertion_point(field_set_rvalue:helloworld.HelloReply.message)
 }
 inline void HelloReply::set_message(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:protocol.hello.v1.HelloReply.message)
+  // @@protoc_insertion_point(field_set_char:helloworld.HelloReply.message)
 }
 inline void HelloReply::set_message(const char* value,
     size_t size) {
   
   message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:protocol.hello.v1.HelloReply.message)
+  // @@protoc_insertion_point(field_set_pointer:helloworld.HelloReply.message)
 }
 inline std::string* HelloReply::_internal_mutable_message() {
   
   return message_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* HelloReply::release_message() {
-  // @@protoc_insertion_point(field_release:protocol.hello.v1.HelloReply.message)
+  // @@protoc_insertion_point(field_release:helloworld.HelloReply.message)
   return message_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void HelloReply::set_allocated_message(std::string* message) {
@@ -498,7 +492,7 @@ inline void HelloReply::set_allocated_message(std::string* message) {
   }
   message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:protocol.hello.v1.HelloReply.message)
+  // @@protoc_insertion_point(field_set_allocated:helloworld.HelloReply.message)
 }
 
 #ifdef __GNUC__
@@ -509,9 +503,7 @@ inline void HelloReply::set_allocated_message(std::string* message) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace v1
-}  // namespace hello
-}  // namespace protocol
+}  // namespace helloworld
 
 // @@protoc_insertion_point(global_scope)
 

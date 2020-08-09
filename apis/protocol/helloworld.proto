@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package protocol.hello.v1;
+package helloworld;
 
 // The greeting service definition.
 service Greeter {
