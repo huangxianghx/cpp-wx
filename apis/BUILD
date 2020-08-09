@@ -5,6 +5,9 @@ cc_library(
     name = "hello_service",
     srcs = ["helloworld.pb.cc","helloworld.grpc.pb.cc"],
     hdrs = ["helloworld.pb.h","helloworld.grpc.pb.h"],
-    visibility = ["//main:__pkg__"],
+    deps = [
+            '@com_google_protobuf//:protobuf',
+            '@com_github_grpc_grpc//:grpc++',
+        ],
+        visibility = ["//visibility:public"],
 )
-
