@@ -63,16 +63,15 @@ void RunServer() {
         // Finally assemble the server.
         std::unique_ptr<Server> server(builder.BuildAndStart());
         cout << "6. define unique_ptr" << endl;
+        std::cout << "Server listening on " << server_address << std::endl;
+        // Wait for the server to shutdown. Note that some other thread must be
+        // responsible for shutting down the server for this call to ever return.
+        server->Wait();
+        cout << "7. waiting connecting" << endl;
     }
     catch(const exception& e){
         cout << e.what() << endl;
     }
-
-    std::cout << "Server listening on " << server_address << std::endl;
-    // Wait for the server to shutdown. Note that some other thread must be
-    // responsible for shutting down the server for this call to ever return.
-    server->Wait();
-    cout << "7. waiting connecting" << endl;
 
 }
 
