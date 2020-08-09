@@ -6,8 +6,8 @@ cc_library(
     srcs = ["helloworld.pb.cc","helloworld.grpc.pb.cc"],
     hdrs = ["helloworld.pb.h","helloworld.grpc.pb.h"],
     deps = [
-            '@com_google_protobuf//:protobuf',
-            '@com_github_grpc_grpc//:grpc++',
+            'protobuf::protobuf',
+            'gRPC::grpc++',
         ],
         visibility = ["//visibility:public"],
 )
