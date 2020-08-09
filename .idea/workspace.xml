@@ -28,16 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apis/protocol/helloworld.grpc.pb.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/protocol/helloworld.grpc.pb.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/protocol/helloworld.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/hello.grpc.pb.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/hello.grpc.pb.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/hello.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/apis/protocol/helloworld.pb.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/hello.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/apis/protocol/helloworld.pb.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/protocol/hello.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/grpcServer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/main/grpcServer.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/apis/BUILD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="16143000" />
+      <workItem from="1596458649256" duration="16279000" />
     </task>
     <servers />
   </component>
