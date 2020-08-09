@@ -25,10 +25,10 @@ cc_binary(
 # 定义grpcServer执行程序
 cc_binary(
     name = "grpcServer",
-    srcs = ["grpcServer.cc","helloworld.pb.cc","helloworld.grpc.pb.cc"],
-    hdrs = ["helloworld.pb.h","helloworld.grpc.pb.h"],
+    srcs = ["grpcServer.cc"],
     deps = [
-        "@usr//:grpc_build"
+        "//apis:hello_service",
+        "@usr//:grpc_build",
     ],
 )
 
