@@ -5,6 +5,11 @@ proto_library(
     srcs = ["helloworld.proto"],
 )
 
+cc_proto_library(
+    name = "helloworld_cc_proto",
+    deps = [":helloworld_proto"],
+)
+
 cc_grpc_library(
     name = "helloworld_cc_grpc",
     srcs = [":helloworld_proto"],
