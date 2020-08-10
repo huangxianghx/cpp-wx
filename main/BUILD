@@ -23,7 +23,6 @@ cc_binary(
     srcs = ["grpcServer.cc"],
     defines = ["BAZEL_BUILD"],
     deps = [
-        ":helloworld_cc_grpc",
         "//:grpc++",
         "//:grpc++_reflection",
     ],
