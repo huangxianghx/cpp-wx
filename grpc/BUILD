@@ -1,6 +1,6 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 load("@rules_proto//proto:defs.bzl", "proto_library")
-load("@bazel_tools//tools/build_defs/cc_grpc_library.bzl", "cc_grpc_library")
+load("@bazel_tools//tools/build_defs/repo:cc_grpc_library.bzl", "cc_grpc_library")
 
 proto_library(
     name = "helloworld_proto",
