@@ -11,9 +11,9 @@ new_local_repository(
 http_archive(
     name = "com_github_grpc_grpc",
     urls = [
-        "https://github.com/grpc/grpc/archive/56ad644c329d90c0742a02462b2bd365ff759158.tar.gz",
+        "https://github.com/grpc/grpc/archive/v1.31.0.tar.gz",
     ],
-    strip_prefix = "grpc-56ad644c329d90c0742a02462b2bd365ff759158",
+    strip_prefix = "grpc-1.31.0",
 )
 
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
