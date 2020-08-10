@@ -1,49 +1,30 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
+load("@bazel_tools//third_party/grpc/bazel:cc_grpc_library.bzl", "cc_grpc_library")
 
-# 引入依赖包
-cc_library(
-    name = "user_service",
-    srcs = ["user_service.cc","user_dao.cc","mysql_connect.cc"],
-    hdrs = ["user_service.h","user_dao.h","mysql_connect.h"],
+proto_library(
+    name = "helloworld_proto",
+    srcs = ["helloworld.proto"],
 )
 
-# 引入依赖包
-cc_library(
-    name = "hello_service",
-    srcs = ["helloworld.pb.cc","helloworld.grpc.pb.cc"],
-    hdrs = ["helloworld.pb.h","helloworld.grpc.pb.h"],
+cc_proto_library(
+    name = "helloworld_cc_proto",
+    deps = [":helloworld_proto"],
 )
 
-# 定义server执行程序
-cc_binary(
-    name = "server",
-    srcs = ["server.cc"],
-    deps = [
-        "//lib:user_service",
-    ],
+cc_grpc_library(
+    name = "helloworld_cc_grpc",
+    srcs = [":helloworld_proto"],
+    deps = [":helloworld_cc_proto"],
 )
 
-# 定义client执行程序
-cc_binary(
-    name = "client",
-    srcs = ["client.cc"],
-)
-
-# 定义grpcServer执行程序
 cc_binary(
     name = "grpcServer",
     srcs = ["grpcServer.cc"],
+    defines = ["BAZEL_BUILD"],
     deps = [
-        "//apis:hello_service",
-    ],
-)
-
-# 定义grpcClient执行程序
-cc_binary(
-    name = "grpcClient",
-    srcs = ["grpcClient.cc"],
-    deps = [
-            "//apis:hello_service",
-            "@usr//:grpc_build",
+        ":helloworld_cc_grpc",
+        "//:grpc++",
+        "//:grpc++_reflection",
     ],
 )
