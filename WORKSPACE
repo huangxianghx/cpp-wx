@@ -1,3 +1,5 @@
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
 #定义外部库空间
 new_local_repository(
     name = "usr",
