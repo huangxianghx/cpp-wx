@@ -12,7 +12,6 @@ cc_binary(
     name = "grpcServer",
     srcs = ["grpcServer.cc"],
     deps = [
-        "@com_github_grpc_grpc//:grpc++",
         "//apis:hello_service",
     ],
 )
