@@ -28,7 +28,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/grpc/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/BUILD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="23229000" />
+      <workItem from="1596458649256" duration="23956000" />
     </task>
     <servers />
   </component>
@@ -138,10 +139,10 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="229" y="75" key="SettingsEditor/0.23.1440.827@0.23.1440.827" timestamp="1596785491730" />
-    <state x="421" y="191" width="598" height="490" key="find.popup" timestamp="1596969745290">
+    <state x="421" y="191" width="598" height="490" key="find.popup" timestamp="1596973464922">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="421" y="191" width="598" height="490" key="find.popup/0.23.1440.827@0.23.1440.827" timestamp="1596969745290" />
+    <state x="421" y="191" width="598" height="490" key="find.popup/0.23.1440.827@0.23.1440.827" timestamp="1596973464922" />
     <state x="385" y="173" width="670" height="677" key="search.everywhere.popup" timestamp="1596966606968">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
