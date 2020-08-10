@@ -21,7 +21,6 @@ cc_grpc_library(
 cc_binary(
     name = "grpcServer",
     srcs = ["grpcServer.cc"],
-    defines = ["BAZEL_BUILD"],
     deps = [
         ":helloworld_cc_grpc",
         "//:grpc++",
