@@ -9,5 +9,5 @@ cc_library(
             "@usr//:grpc_build",
             "@usr//:proto_build",
         ],
-    visibility = ["//main:__pkg__"],
+    visibility = ["//visibility:public"],
 )
