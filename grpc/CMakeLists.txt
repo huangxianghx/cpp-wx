@@ -7,8 +7,15 @@ project(cpp-wx)
 # 设置c++环境
 set(CMAKE_CXX_STANDARD 14)
 
-# 指定生成目标
-add_executable(grpc_server grpcServer.cc helloworld.pb.cc helloworld.grpc.pb.cc)
+set(_PROTOBUF_LIBPROTOBUF libprotobuf)
+set(_REFLECTION grpc++_reflection)
+set(_GRPC_GRPCPP gRPC::grpc++)
 
-# 引入lib链接库
-target_link_libraries(grpc_server gRPC::grpc++_reflection gRPC::grpc++ libprotobuf )
+
+add_executable(grpc_server "grpcServer.cc"
+        "helloworld.pb.cc"
+        "helloworld.grpc.pb.cc")
+target_link_libraries(grpc_server
+        ${_REFLECTION}
+        ${_GRPC_GRPCPP}
+        ${_PROTOBUF_LIBPROTOBUF})
