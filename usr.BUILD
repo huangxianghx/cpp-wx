@@ -9,3 +9,19 @@ cc_library(
     includes = ["include/mysql"],
     visibility = ["//visibility:public"]
 )
+
+cc_library(
+    name = "grpc_build",
+    srcs = glob(["local/lib/*.so"]),
+    hdrs = glob(["local/include/grpc/**"]),
+    includes = ["local/include/grpc"],
+    visibility = ["//visibility:public"]
+)
+
+cc_library(
+    name = "proto_build",
+    srcs = glob(["local/lib/*.so"]),
+    hdrs = glob(["local/include/google/protobuf/**"]),
+    includes = ["local/include/google/protobuf"],
+    visibility = ["//visibility:public"]
+)
