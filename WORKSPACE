@@ -11,7 +11,7 @@ new_local_repository(
 git_repository(
     name = "org_pubref_rules_protobuf",
     remote = "https://github.com/pubref/rules_protobuf.git",
-    tag = "v0.6.0",
+    tag = "v0.8.2",
 )
 
 # Load language-specific dependencies
