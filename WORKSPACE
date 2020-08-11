@@ -8,6 +8,12 @@ new_local_repository(
     build_file = "usr.BUILD"
 )
 
+git_repository(
+    name = "build_bazel_rules_swift",
+    remote = "https://github.com/bazelbuild/rules_swift.git",
+    commit = "[bde6d3142f1db632d0055a06dc95b08a8c1a3b04]",
+)
+
 
 http_archive(
     name = "rules_proto",
