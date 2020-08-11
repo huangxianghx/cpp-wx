@@ -8,13 +8,6 @@ new_local_repository(
     build_file = "usr.BUILD"
 )
 
-git_repository(
-    name = "build_bazel_rules_swift",
-    remote = "https://github.com/bazelbuild/rules_swift.git",
-    commit = "[bde6d3142f1db632d0055a06dc95b08a8c1a3b04]",
-)
-
-
 http_archive(
     name = "rules_proto",
     sha256 = "602e7161d9195e50246177e7c55b2f39950a9cf7366f74ed5f22fd45750cd208",
@@ -41,3 +34,6 @@ http_archive(
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
 
 grpc_deps()
+
+load("@com_github_grpc_grpc//bazel:grpc_extra_deps.bzl", "grpc_extra_deps")
+grpc_extra_deps()
