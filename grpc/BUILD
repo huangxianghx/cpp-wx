@@ -1,8 +1,8 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 
 load("@rules_proto//proto:defs.bzl", "proto_library")
-load("//bazel:cc_grpc_library.bzl", "cc_grpc_library")
-load("//bazel:grpc_build_system.bzl", "grpc_proto_library")
+load("@bazel_tools//bazel:cc_grpc_library.bzl", "cc_grpc_library")
+load("@bazel_tools//bazel:grpc_build_system.bzl", "grpc_proto_library")
 
 
 # The following three rules demonstrate the usage of the cc_grpc_library rule in
