@@ -6,6 +6,7 @@ cc_library(
     srcs = glob(["*.pb.cc"]),
     hdrs = glob(["*.pb.h"]),
     deps = [
+            '@com_google_protobuf//:protobuf',
             '@com_github_grpc_grpc//:grpc++',
     ],
 )
