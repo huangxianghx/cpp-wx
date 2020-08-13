@@ -2,13 +2,21 @@ load("@rules_cc//cc:defs.bzl", "cc_proto_library")
 load("@rules_java//java:defs.bzl", "java_proto_library")
 load("@rules_proto//proto:defs.bzl", "proto_library")
 
+proto_library(
+    name = "helloworld_proto",
+    srcs = ["helloworld.proto"],
+)
+
 cc_proto_library(
     name = "helloworld_cc_proto",
     deps = [":helloworld_proto"],
 )
-proto_library(
-    name = "helloworld_proto",
-    srcs = ["helloworld.proto"],
+
+cc_grpc_library(
+    name = "helloworld_cc_grpc",
+    srcs = [":helloworld_proto"],
+    grpc_only = True,
+    deps = [":helloworld_cc_proto"],
 )
 
 # grpc依赖服务
@@ -24,8 +32,8 @@ cc_library(
 
 # 定义grpcServer执行程序
 cc_binary(
-    name = "grpcServer",
-    srcs = ["grpcServer.cc"],
+    name = "grpc_server",
+    srcs = ["grpc_server.cc"],
     deps = [
         ":hello_grpc",
     ],
