@@ -1,10 +1,11 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
+# 通过github的方式加载protobuf库
 git_repository(
     name = "com_google_protobuf",
     remote = "https://github.com/google/protobuf",
-    tag = "v3.12.4",
+    tag = "v3.12.2",
 )
 
 # rules_cc defines rules for generating C++ code from Protocol Buffers.
@@ -32,7 +33,7 @@ load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_
 rules_proto_dependencies()
 rules_proto_toolchains()
 
-# grpc tag 1.27.3
+# 通过http的方式加载grpc库
 http_archive(
     name = "com_github_grpc_grpc",
     urls = [
