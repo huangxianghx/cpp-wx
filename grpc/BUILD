@@ -1,32 +1,19 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
-
+load("@rules_cc//cc:defs.bzl", "cc_proto_library")
+load("@rules_java//java:defs.bzl", "java_proto_library")
 load("@rules_proto//proto:defs.bzl", "proto_library")
-load("@bazel_tools//bazel:cc_grpc_library.bzl", "cc_grpc_library")
-load("@bazel_tools//bazel:grpc_build_system.bzl", "grpc_proto_library")
-
-
-# The following three rules demonstrate the usage of the cc_grpc_library rule in
-# in a mode compatible with the native proto_library and cc_proto_library rules.
-proto_library(
-    name = "helloworld_proto",
-    srcs = ["helloworld.proto"],
-)
 
 cc_proto_library(
     name = "helloworld_cc_proto",
     deps = [":helloworld_proto"],
 )
-
-cc_grpc_library(
-    name = "helloworld_cc_grpc",
-    srcs = [":helloworld_proto"],
-    grpc_only = True,
-    deps = [":helloworld_cc_proto"],
+proto_library(
+    name = "helloworld_proto",
+    srcs = ["helloworld.proto"],
 )
 
 # grpc依赖服务
 cc_library(
-    name = "hello_service",
+    name = "hello_grpc",
     srcs = glob(["*.pb.cc"]),
     hdrs = glob(["*.pb.h"]),
     deps = [
@@ -40,6 +27,6 @@ cc_binary(
     name = "grpcServer",
     srcs = ["grpcServer.cc"],
     deps = [
-        ":hello_service",
+        ":hello_grpc",
     ],
 )
