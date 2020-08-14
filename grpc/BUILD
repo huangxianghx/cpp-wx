@@ -23,22 +23,14 @@ cc_grpc_library(
     deps = [":helloworld_cc_proto"],
 )
 
-# grpc依赖服务
-cc_library(
-    name = "hello_grpc",
-    srcs = glob(["grpc/*.pb.cc"]),
-    hdrs = glob(["grpc/*.pb.h"]),
-    deps = [
-            '@com_google_protobuf//:protobuf',
-            '@com_github_grpc_grpc//:grpc++',
-    ],
-)
 
 # 定义grpcServer执行程序
 cc_binary(
     name = "grpc_server",
     srcs = ["grpc_server.cc"],
     deps = [
-        ":hello_grpc",
+        ":helloworld_cc_proto",
+        '@com_github_grpc_grpc//:grpc++',
+        '@com_github_grpc_grpc//:grpc++'@com_github_grpc_grpc//:grpc++',',
     ],
 )
