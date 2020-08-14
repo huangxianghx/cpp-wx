@@ -10,6 +10,7 @@
 #include <grpcpp/ext/proto_server_reflection_plugin.h>
 
 #include "grpc/helloworld.grpc.pb.h"
+#include "grpc/greet_service.cpp"
 
 
 using grpc::Server;
@@ -21,15 +22,6 @@ using helloworld::HelloReply;
 using helloworld::Greeter;
 
 
-// Logic and data behind the server's behavior.
-class GreeterServiceImpl final : public Greeter::Service {
-    Status SayHello(ServerContext* context, const HelloRequest* request,
-                    HelloReply* reply) override {
-        std::string prefix("Hello ");
-        reply->set_message(prefix + request->name());
-        return Status::OK;
-    }
-};
 
 void RunServer() {
     std::string server_address("127.0.0.1:50051");
