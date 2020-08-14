@@ -10,6 +10,10 @@ grpc_proto_library(
 cc_library(
     name = "greet_service",
     srcs = ["greet_service.cc"],
-    deps = [":helloworld_proto",]
+    deps = [
+        ":helloworld_proto",
+        '@com_github_grpc_grpc//:grpc++',
+        '@com_github_grpc_grpc//:grpc++_reflection',
+    ]
     visibility = ["//visibility:public"],
 )
