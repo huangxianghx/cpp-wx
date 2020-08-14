@@ -28,24 +28,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/grpc/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/BUILD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/helloworld.grpc.pb.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/helloworld.grpc.pb.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/helloworld.pb.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/helloworld.pb.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/helloworld.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_proto.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/BUILD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/BUILD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/client.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/greeter_server.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/grpcClient.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/grpcServer.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/server.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/BUILD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/helloworld.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="50356000" />
+      <workItem from="1596458649256" duration="50778000" />
     </task>
     <servers />
   </component>
