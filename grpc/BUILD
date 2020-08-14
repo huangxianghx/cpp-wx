@@ -12,7 +12,6 @@ cc_library(
     name = "greet_service",
     srcs = glob(["greet_service.cpp"]),
     deps = [":helloworld_proto",]
-    visibility = ["//visibility:public"]
 )
 
 # 定义grpc_server执行程序
