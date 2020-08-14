@@ -13,7 +13,7 @@
 #include<unistd.h>
 #include<iostream>
 #include <grpcpp/grpcpp.h>
-#include "grpc/hello.grpc.pb.h"
+#include "grpc/helloworld.grpc.pb.h"
 
 
 using namespace std;
