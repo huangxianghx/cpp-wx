@@ -26,6 +26,5 @@ cc_binary(
     deps = [
         ":helloworld_proto",
         '@com_github_grpc_grpc//:grpc++',
-        '@com_github_grpc_grpc//:grpc++_reflection',
     ],
 )
