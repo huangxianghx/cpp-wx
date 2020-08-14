@@ -5,7 +5,6 @@ cc_binary(
     srcs = ["grpc_server.cc"],
     deps = [
         "//grpc:greet_service",
-        "//grpc:helloworld_proto",
         '@com_github_grpc_grpc//:grpc++',
         '@com_github_grpc_grpc//:grpc++_reflection',
     ],

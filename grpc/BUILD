@@ -4,7 +4,6 @@ load("@com_github_grpc_grpc//bazel:grpc_build_system.bzl", "grpc_proto_library")
 grpc_proto_library(
     name = "helloworld_proto",
     srcs = ["helloworld.proto"],
-    visibility = ["//visibility:public"],
 )
 
 # 定义greet grpc服务
