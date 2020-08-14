@@ -27,8 +27,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="text">
+      <change afterPath="$PROJECT_DIR$/grpc/user/BUILD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc/user/grpc_userservice.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc/user/grpc_userservice.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc/user/userservice.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/BUILD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,23 +62,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/grpc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/grpc/user" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/main" />
+      <recent name="$PROJECT_DIR$/grpc/user" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apis" />
       <recent name="$PROJECT_DIR$/grpc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grpc/user" />
       <recent name="$PROJECT_DIR$/grpc" />
       <recent name="$PROJECT_DIR$/proto/cpp" />
       <recent name="$PROJECT_DIR$/proto" />
       <recent name="$PROJECT_DIR$/main" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -86,8 +92,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="50832000" />
+      <workItem from="1596458649256" duration="56455000" />
     </task>
+    <task id="LOCAL-00001" summary="text">
+      <created>1597396701250</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597396701250</updated>
+    </task>
+    <task id="LOCAL-00002" summary="text">
+      <created>1597396961437</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597396961437</updated>
+    </task>
+    <task id="LOCAL-00003" summary="text">
+      <created>1597397074741</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597397074741</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +142,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="text" />
+    <option name="LAST_COMMIT_MESSAGE" value="text" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="304" y="88" key="#SSH_Configurations" timestamp="1596785423058">
       <screen x="0" y="23" width="1440" height="827" />
@@ -123,14 +155,15 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="184" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.827@0.23.1440.827" timestamp="1596785414512" />
-    <state x="442" y="245" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596529279618">
-      <screen x="0" y="23" width="1440" height="826" />
-    </state>
-    <state x="442" y="245" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.826/-789.-1417.2560.1417@0.23.1440.826" timestamp="1596529279618" />
-    <state x="458" y="190" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597224889281">
+    <state x="442" y="245" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597391861113">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="458" y="190" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.827/-789.-1417.2560.1417@0.23.1440.827" timestamp="1597224889281" />
+    <state x="442" y="245" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.826/-789.-1417.2560.1417@0.23.1440.826" timestamp="1596529279618" />
+    <state x="442" y="245" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.827/-789.-1417.2560.1417@0.23.1440.827" timestamp="1597391861113" />
+    <state x="458" y="190" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597396450779">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="458" y="190" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.827/-789.-1417.2560.1417@0.23.1440.827" timestamp="1597396450779" />
     <state x="458" y="190" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.827@0.23.1440.827" timestamp="1597051191900" />
     <state x="100" y="123" width="1240" height="626" key="DiffContextDialog" timestamp="1597321321691">
       <screen x="0" y="23" width="1440" height="827" />
@@ -142,6 +175,10 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="229" y="75" key="SettingsEditor/0.23.1440.827@0.23.1440.827" timestamp="1596785491730" />
+    <state x="320" y="176" key="Vcs.Push.Dialog.v2" timestamp="1597397075792">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="320" y="176" key="Vcs.Push.Dialog.v2/0.23.1440.827/-789.-1417.2560.1417@0.23.1440.827" timestamp="1597397075792" />
     <state x="421" y="191" width="599" height="518" key="find.popup" timestamp="1597322058453">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
