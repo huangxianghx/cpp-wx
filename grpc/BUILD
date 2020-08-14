@@ -8,11 +8,18 @@ grpc_proto_library(
 )
 
 
+cc_library(
+    name = "greet_service",
+    srcs = glob(["grpc/greet_service.cpp"]),
+    visibility = ["//visibility:public"]
+)
+
 # 定义grpc_server执行程序
 cc_binary(
     name = "grpc_server",
-    srcs = ["grpc_server.cc","greet_service.cpp"],
+    srcs = ["grpc_server.cc"],
     deps = [
+        ":greet_service",
         ":helloworld_proto",
         '@com_github_grpc_grpc//:grpc++',
         '@com_github_grpc_grpc//:grpc++_reflection',
