@@ -28,7 +28,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="text">
+      <change afterPath="$PROJECT_DIR$/main/BUILD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/grpc_server.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grpc/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/BUILD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/grpc_server.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/grpc_server.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +61,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/grpc/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
@@ -70,11 +74,11 @@
       <recent name="$PROJECT_DIR$/grpc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main" />
       <recent name="$PROJECT_DIR$/grpc/user" />
       <recent name="$PROJECT_DIR$/grpc" />
       <recent name="$PROJECT_DIR$/proto/cpp" />
       <recent name="$PROJECT_DIR$/proto" />
-      <recent name="$PROJECT_DIR$/main" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -87,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="56619000" />
+      <workItem from="1596458649256" duration="57993000" />
     </task>
     <task id="LOCAL-00001" summary="text">
       <created>1597396701250</created>
