@@ -10,7 +10,7 @@ grpc_proto_library(
 
 cc_library(
     name = "greet_service",
-    srcs = glob(["grpc/greet_service.cpp"]),
+    srcs = glob(["greet_service.cpp"]),
     visibility = ["//visibility:public"]
 )
 
