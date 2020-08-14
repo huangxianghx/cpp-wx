@@ -68,7 +68,7 @@ private:
 
 int main() {
     // grpc调用
-    string target_str = "47.107.147.126:50051";
+    string target_str = "127.0.0.1:50051";
     GreeterClient greeterClient(grpc::CreateChannel(
             target_str, grpc::InsecureChannelCredentials()));
     std::string user("world");
