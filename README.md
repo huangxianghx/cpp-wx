@@ -1,7 +1,8 @@
-### bazel 构建 grpc 服务
+## bazel 构建 grpc 服务
 
-1.WORKSPACE引入grpc、protobuf外部库
+### 1.WORKSPACE引入grpc、protobuf外部库
 
+```
 # 通过http的方式加载grpc库
 http_archive(
     name = "com_github_grpc_grpc",
@@ -23,8 +24,10 @@ git_repository(
     remote = "https://github.com/google/protobuf",
     tag = "v3.12.2",
 )
+```
 
-2.BUILD文件通过引入grpc_proto_library标签生成proto文件
+### 2.BUILD文件通过引入grpc_proto_library标签生成proto文件
+```
 # 定义proto文件
 grpc_proto_library(
     name = "helloworld_proto",
@@ -52,3 +55,4 @@ cc_binary(
         '@com_github_grpc_grpc//:grpc++',
     ],
 )
+```
