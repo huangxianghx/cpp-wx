@@ -26,8 +26,8 @@ cc_grpc_library(
 # grpc依赖服务
 cc_library(
     name = "hello_grpc",
-    srcs = glob(["*.pb.cc"]),
-    hdrs = glob(["*.pb.h"]),
+    srcs = glob(["grpc/*.pb.cc"]),
+    hdrs = glob(["grpc/*.pb.h"]),
     deps = [
             '@com_google_protobuf//:protobuf',
             '@com_github_grpc_grpc//:grpc++',
