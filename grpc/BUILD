@@ -8,7 +8,7 @@ load("@com_github_grpc_grpc//bazel:grpc_build_system.bzl", "grpc_proto_library")
 # 定义proto文件
 grpc_proto_library(
     name = "helloworld_proto",
-    srcs = ["grpc/helloworld.proto"],
+    srcs = ["helloworld.proto"],
 )
 
 
