@@ -10,7 +10,7 @@ grpc_proto_library(
 
 cc_library(
     name = "greet_service",
-    srcs = glob(["greet_service.cpp"]),
+    srcs = ["greet_service.cpp"],
     deps = [":helloworld_proto",]
 )
 
