@@ -20,36 +20,36 @@ using namespace std;
 using grpc::Channel;
 using grpc::ClientContext;
 using grpc::Status;
-using protocol::hello::v1::HelloReq;
-using protocol::hello::v1::HelloResp;
-using protocol::hello::v1::HelloAPI;
+using helloworld::HelloRequest;
+using helloworld::HelloReply;
+using helloworld::Greeter;
 
 int socket_fd;
 
 /**
  * grpc调用封装
  */
-class HelloClient {
+class GreeterClient {
 public:
-    HelloClient(std::shared_ptr<Channel> channel)
-            : stub_(HelloAPI::NewStub(channel)) {}
+    GreeterClient(std::shared_ptr<Channel> channel)
+            : stub_(Greeter::NewStub(channel)) {}
 
     // Assembles the client's payload, sends it and presents the response back
     // from the server.
-    std::string sayHello(const std::string& user) {
+    std::string SayHello(const std::string& user) {
         // Data we are sending to the server.
-        HelloReq request;
+        HelloRequest request;
         request.set_name(user);
 
         // Container for the data we expect from the server.
-        HelloResp reply;
+        HelloReply reply;
 
         // Context for the client. It could be used to convey extra information to
         // the server and/or tweak certain RPC behaviors.
         ClientContext context;
 
         // The actual RPC.
-        Status status = stub_->sayHello(&context, request, &reply);
+        Status status = stub_->SayHello(&context, request, &reply);
 
         // Act upon its status.
         if (status.ok()) {
@@ -62,16 +62,16 @@ public:
     }
 
 private:
-    std::unique_ptr<HelloAPI::Stub> stub_;
+    std::unique_ptr<Greeter::Stub> stub_;
 };
 
 
 int main() {
     // grpc调用
     string target_str = "47.107.147.126:50051";
-    HelloClient hello(grpc::CreateChannel(
+    GreeterClient greeterClient(grpc::CreateChannel(
             target_str, grpc::InsecureChannelCredentials()));
     std::string user("world");
-    std::string reply = hello.sayHello(user);
+    std::string reply = greeterClient.SayHello(user);
     std::cout << "Hello received: " << reply << std::endl;
 }
