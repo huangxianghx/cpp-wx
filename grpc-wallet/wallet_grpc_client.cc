@@ -40,7 +40,7 @@ public:
         wallet::ChargeRequest request;
 
         // Container for the data we expect from the server.
-        ChargeResponse response;
+        wallet::ChargeResponse response;
 
         // Context for the client. It could be used to convey extra information to
         // the server and/or tweak certain RPC behaviors.
