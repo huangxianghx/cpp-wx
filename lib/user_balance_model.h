@@ -4,7 +4,7 @@
 
 #ifndef CPP_WX_USER_BALANCE_MODEL_H
 #define CPP_WX_USER_BALANCE_MODEL_H
-#include <cstring>
+#include <string>
 
 using namespace std;
 /**
