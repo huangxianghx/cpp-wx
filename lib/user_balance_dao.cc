@@ -17,7 +17,7 @@ char sql[150];
 int result;
 
 // 初始值 0
-const static final double ZERO = 0;
+const static double ZERO = 0;
 
 
 /**
@@ -92,11 +92,11 @@ UserBalance UserBalanceDao::queryUserBalance(string userId) {
     // 执行sql
     auto result = mysql_query(&mysql, sql);
     if (!resule.isEmpty()) {
-        result.fetch(userBalance.getUserId(),userBalance.getBalance(),userBalance.getVersion(),userBalance.getUpdateTime);
+//        result.fetch(userBalance.getUserId(),userBalance.getBalance(),userBalance.getVersion(),userBalance.getUpdateTime);
     }
     // 关闭数据库连接
     closeMysqlConnect(&mysql);
-    return result;
+    return userBalance;
 }
 
 
