@@ -7,9 +7,6 @@
 
 using namespace std;
 
-// 创建dao服务
-UserBalanceDao userBalanceDao;
-
 /**
  * 充值
  * @param chargeRequest
