@@ -1,8 +1,7 @@
 //
 // Created by 黄湘 on 2020/8/17.
 //
-
-
+#include <cstring>
 #include "user_balance_model.h"
 
 string UserBalance::getUserId() {
