@@ -28,8 +28,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="text">
-      <change beforePath="$PROJECT_DIR$/grpc/greet_service.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/greet_service.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/greet_service.h" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/greet_service.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/BUILD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/greet_service.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/greet_service.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/grpc_server.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/grpc_server.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="60849000" />
+      <workItem from="1596458649256" duration="61224000" />
     </task>
     <task id="LOCAL-00001" summary="text">
       <created>1597396701250</created>
