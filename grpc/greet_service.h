@@ -8,5 +8,12 @@
 /**
  * 定义类
  */
-class GreeterServiceImpl{};
+class GreeterServiceImpl final : public Greeter::Service {
+    Status SayHello(ServerContext* context, const HelloRequest* request,
+                    HelloReply* reply) override {
+        std::string prefix("Hello ");
+        reply->set_message(prefix + request->name());
+        return Status::OK;
+    }
+};
 #endif //CPP_WX_GREET_SERVIC_H
