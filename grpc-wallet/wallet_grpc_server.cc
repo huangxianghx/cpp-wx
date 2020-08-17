@@ -25,28 +25,29 @@ using wallet::QueryOrderRequest;
 using wallet::QueryOrderResponse;
 using wallet::WalletService;
 
+UserBalanceService userBalanceService;
+
 /**
  * 声明grpc stub
  */
 class WalletServiceImpl final : public WalletService::Service {
-    UserBalanceService userBalanceService;
 
     Status Charge(ServerContext* context, const ChargeRequest* request,
-                  ChargeResponse* reply) override {
+                  ChargeResponse* response) override {
         // todo...
         userBalanceService.charge();
         return Status::OK;
     }
 
     Status Consume(ServerContext* context, const ConsumeRequest* request,
-                   ConsumeResponse* reply) override {
+                   ConsumeResponse* response) override {
         // todo...
         userBalanceService.consume();
         return Status::OK;
     }
 
     Status QueryOrder(ServerContext* context, const QueryOrderRequest* request,
-                      QueryOrderResponse* reply) override {
+                      QueryOrderResponse* response) override {
         // todo...
         userBalanceService.queryOrder();
         return Status::OK;
