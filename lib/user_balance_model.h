@@ -6,6 +6,7 @@
 #define CPP_WX_USER_BALANCE_MODEL_H
 #include <cstring>
 
+using namespace std;
 /**
  * 用户余额对象
  */

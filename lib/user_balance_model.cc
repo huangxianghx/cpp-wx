@@ -4,6 +4,8 @@
 #include <cstring>
 #include "user_balance_model.h"
 
+using namespace std;
+
 string UserBalance::getUserId() {
     return userId;
 }
