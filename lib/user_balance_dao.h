@@ -27,7 +27,7 @@ public:
      * @param amount
      * @return
      */
-    bool updateUserBalance(String userId,double amount);
+    bool updateUserBalance(string userId,double amount);
     /**
      * 查询用户余额
      * @param userId

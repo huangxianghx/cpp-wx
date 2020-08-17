@@ -18,6 +18,14 @@ using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
 using wallet::WalletService;
+using wallet::ChargeRequest;
+using wallet::ChargeResponse;
+using wallet::ConsumeRequest;
+using wallet::ConsumeResponse;
+using wallet::QueryBalanceRequest;
+using wallet::QueryBalanceResponse;
+using wallet::QueryOrderRequest;
+using wallet::QueryOrderResponse;
 
 UserBalanceService userBalanceService;
 
@@ -26,30 +34,30 @@ UserBalanceService userBalanceService;
  */
 class WalletServiceImpl final : public WalletService::Service {
 
-    Status Charge(ServerContext* context, const wallet::ChargeRequest* request,
-                  wallet::ChargeResponse* response) override {
+    Status Charge(ServerContext* context, const ChargeRequest* request,
+                  ChargeResponse* response) override {
         // todo...
         userBalanceService.charge(request->userId(),request->orderId(),request->amount());
         response->set_orderId(request->orderId());
         return Status::OK;
     }
 
-    Status Consume(ServerContext* context, const wallet::ConsumeRequest* request,
-                   wallet::ConsumeResponse* response) override {
+    Status Consume(ServerContext* context, const ConsumeRequest* request,
+                   ConsumeResponse* response) override {
         // todo...
         userBalanceService.consume(consumeRequest);
         return Status::OK;
     }
 
-    Status QueryBalance(ServerContext* context, const wallet::QueryBalanceRequest* request,
-                      wallet::QueryBalanceResponse* response) override {
+    Status QueryBalance(ServerContext* context, const QueryBalanceRequest* request,
+                      QueryBalanceResponse* response) override {
         // todo...
         userBalanceService.queryBalance(queryBalanceRequest);
         return Status::OK;
     }
 
-    Status QueryOrder(ServerContext* context, const wallet::QueryOrderRequest* request,
-                      wallet::QueryOrderResponse* response) override {
+    Status QueryOrder(ServerContext* context, const QueryOrderRequest* request,
+                      QueryOrderResponse* response) override {
         // todo...
         userBalanceService.queryOrder(queryOrderRequest);
         return Status::OK;
