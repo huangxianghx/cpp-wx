@@ -46,7 +46,7 @@ class WalletServiceImpl final : public WalletService::Service {
                       wallet::QueryBalanceResponse* response) override {
         // todo...
         QueryBalanceRequest queryBalanceRequest;
-        userBalanceService.queryBalance(queryBalanceRequest;
+        userBalanceService.queryBalance(queryBalanceRequest);
         return Status::OK;
     }
 
