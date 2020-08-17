@@ -17,3 +17,14 @@ cc_binary(
         '@com_github_grpc_grpc//:grpc++_reflection',
     ],
 )
+
+# 定义wallet_grpc_client执行程序
+cc_binary(
+    name = "wallet_grpc_client",
+    srcs = ["wallet_grpc_client.cc"],
+    deps = [
+        ":wallet_proto",
+        '@com_github_grpc_grpc//:grpc++',
+    ],
+)
+
