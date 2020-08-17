@@ -37,8 +37,8 @@ class WalletServiceImpl final : public WalletService::Service {
     Status Charge(ServerContext* context, const ChargeRequest* request,
                   ChargeResponse* response) override {
         // todo...
-        userBalanceService.charge(request->userId(),request->orderId(),request->amount());
-        response->set_orderId(request->orderId());
+        userBalanceService.charge(request->userid(),request->orderid(),request->amount());
+        response->set_orderid(request->orderid());
         return Status::OK;
     }
 
