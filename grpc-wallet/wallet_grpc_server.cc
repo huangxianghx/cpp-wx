@@ -17,12 +17,6 @@ using grpc::Server;
 using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
-using wallet::ChargeRequest;
-using wallet::ChargeResponse;
-using wallet::ConsumeRequest;
-using wallet::ConsumeResponse;
-using wallet::QueryOrderRequest;
-using wallet::QueryOrderResponse;
 using wallet::WalletService;
 
 UserBalanceService userBalanceService;
@@ -32,22 +26,22 @@ UserBalanceService userBalanceService;
  */
 class WalletServiceImpl final : public WalletService::Service {
 
-    Status Charge(ServerContext* context, const ChargeRequest* request,
-                  ChargeResponse* response) override {
+    Status Charge(ServerContext* context, const wallet::ChargeRequest* request,
+                  wallet::ChargeResponse* response) override {
         // todo...
         userBalanceService.charge();
         return Status::OK;
     }
 
-    Status Consume(ServerContext* context, const ConsumeRequest* request,
-                   ConsumeResponse* response) override {
+    Status Consume(ServerContext* context, const wallet::ConsumeRequest* request,
+                   wallet::ConsumeResponse* response) override {
         // todo...
         userBalanceService.consume();
         return Status::OK;
     }
 
-    Status QueryOrder(ServerContext* context, const QueryOrderRequest* request,
-                      QueryOrderResponse* response) override {
+    Status QueryOrder(ServerContext* context, const wallet::QueryOrderRequest* request,
+                      wallet::QueryOrderResponse* response) override {
         // todo...
         userBalanceService.queryOrder();
         return Status::OK;
