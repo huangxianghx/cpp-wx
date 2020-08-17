@@ -45,21 +45,21 @@ class WalletServiceImpl final : public WalletService::Service {
     Status Consume(ServerContext* context, const ConsumeRequest* request,
                    ConsumeResponse* response) override {
         // todo...
-        userBalanceService.consume(consumeRequest);
+        userBalanceService.consume(request->userid(),request->orderid(),request->amount());
         return Status::OK;
     }
 
     Status QueryBalance(ServerContext* context, const QueryBalanceRequest* request,
                       QueryBalanceResponse* response) override {
         // todo...
-        userBalanceService.queryBalance(queryBalanceRequest);
+        userBalanceService.queryBalance(request->userid());
         return Status::OK;
     }
 
     Status QueryOrder(ServerContext* context, const QueryOrderRequest* request,
                       QueryOrderResponse* response) override {
         // todo...
-        userBalanceService.queryOrder(queryOrderRequest);
+        userBalanceService.queryOrder(request->userid(),request->orderid());
         return Status::OK;
     }
 };
