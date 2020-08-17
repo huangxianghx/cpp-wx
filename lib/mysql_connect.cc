@@ -21,7 +21,7 @@ void initMysqlConnect(MYSQL *mysql) {
             "47.107.147.126",
             "root",
             "root",
-            "test",
+            "wallet",
             3306,
             NULL,
             0

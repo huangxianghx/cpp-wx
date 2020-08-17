@@ -29,7 +29,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/user_balance_model.cc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_balance_model.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-wallet/wallet_grpc_client.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-wallet/wallet_grpc_client.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc-wallet/wallet_grpc_server.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-wallet/wallet_grpc_server.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mysql_connect.cc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mysql_connect.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/user_balance_dao.cc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_balance_dao.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/user_balance_dao.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_balance_dao.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/user_balance_service.cc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_balance_service.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/user_balance_service.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_balance_service.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="70536000" />
+      <workItem from="1596458649256" duration="76080000" />
     </task>
     <task id="LOCAL-00001" summary="text">
       <created>1597396701250</created>
@@ -161,10 +167,10 @@
     </state>
     <state x="458" y="190" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.827/-789.-1417.2560.1417@0.23.1440.827" timestamp="1597396450779" />
     <state x="458" y="190" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.827@0.23.1440.827" timestamp="1597051191900" />
-    <state x="100" y="123" width="1240" height="626" key="DiffContextDialog" timestamp="1597321321691">
+    <state x="100" y="123" width="1240" height="626" key="DiffContextDialog" timestamp="1597649899046">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="100" y="123" width="1240" height="626" key="DiffContextDialog/0.23.1440.827/-789.-1417.2560.1417@0.23.1440.827" timestamp="1597321321691" />
+    <state x="100" y="123" width="1240" height="626" key="DiffContextDialog/0.23.1440.827/-789.-1417.2560.1417@0.23.1440.827" timestamp="1597649899046" />
     <state x="100" y="123" width="1240" height="626" key="DiffContextDialog/0.23.1440.827@0.23.1440.827" timestamp="1597051674262" />
     <state x="-611" y="-1246" width="2205" height="1073" key="DiffContextDialog/0.23.1440.828/-789.-1417.2560.1417@-789.-1417.2560.1417" timestamp="1597139455263" />
     <state x="229" y="75" key="SettingsEditor" timestamp="1596785491730">
@@ -182,11 +188,11 @@
     <state x="421" y="191" width="598" height="490" key="find.popup/0.23.1440.827@0.23.1440.827" timestamp="1597053180800" />
     <state x="-41" y="-1129" width="1064" height="840" key="find.popup/0.23.1440.828/-789.-1417.2560.1417@-789.-1417.2560.1417" timestamp="1597139719700" />
     <state x="421" y="191" width="599" height="491" key="find.popup/0.23.1440.828@0.23.1440.828" timestamp="1597161928022" />
-    <state x="385" y="173" width="670" height="677" key="search.everywhere.popup" timestamp="1597224955473">
+    <state x="385" y="173" width="670" height="677" key="search.everywhere.popup" timestamp="1597655775212">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="385" y="173" width="670" height="676" key="search.everywhere.popup/0.23.1440.826/-789.-1417.2560.1417@0.23.1440.826" timestamp="1596459559769" />
-    <state x="385" y="173" width="670" height="677" key="search.everywhere.popup/0.23.1440.827/-789.-1417.2560.1417@0.23.1440.827" timestamp="1597224955473" />
+    <state x="385" y="173" width="670" height="677" key="search.everywhere.popup/0.23.1440.827/-789.-1417.2560.1417@0.23.1440.827" timestamp="1597655775212" />
     <state x="385" y="173" width="670" height="677" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1596966606968" />
   </component>
 </project>

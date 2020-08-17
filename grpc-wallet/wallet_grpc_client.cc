@@ -35,9 +35,12 @@ public:
 
     // Assembles the client's payload, sends it and presents the response back
     // from the server.
-    std::string Charge(const std::string& user) {
+    std::string Charge(const std::string& userId,const std::string& orderId,const double& amount) {
         // Data we are sending to the server.
         wallet::ChargeRequest request;
+        request.set_userId(userId);
+        request.set_orderId(orderId);
+        request.set_amount(amount);
 
         // Container for the data we expect from the server.
         wallet::ChargeResponse response;
@@ -51,6 +54,7 @@ public:
 
         // Act upon its status.
         if (status.ok()) {
+            cout << response.orderId();
             return "RPC success";
         } else {
             std::cout << status.error_code() << ": " << status.error_message()

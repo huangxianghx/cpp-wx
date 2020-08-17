@@ -13,8 +13,11 @@ UserBalanceDao userBalanceDao;
  * @param chargeRequest
  * @return
  */
-int UserBalanceService::charge(ChargeRequest chargeRequest) {
+int UserBalanceService::charge(string userId, string orderId, double amount) {
     cout << "charge" <<endl;
+    cout << userId << endl;
+    cout << orderId << endl;
+    cout << amount << endl;
     return 0;
 }
 
@@ -23,7 +26,7 @@ int UserBalanceService::charge(ChargeRequest chargeRequest) {
  * @param consumeRequest
  * @return
  */
-int UserBalanceService::consume(ConsumeRequest consumeRequest) {
+int UserBalanceService::consume(string userId, string orderId, double amount) {
     cout << "consume" << endl;
     return 0;
 }
@@ -33,7 +36,7 @@ int UserBalanceService::consume(ConsumeRequest consumeRequest) {
  * @param queryBalanceRequest
  * @return
  */
-int UserBalanceService::queryBalance(QueryBalanceRequest queryBalanceRequest) {
+int UserBalanceService::queryBalance(string userId) {
     cout << "queryBalance" << endl;
     return 0;
 }
@@ -43,7 +46,7 @@ int UserBalanceService::queryBalance(QueryBalanceRequest queryBalanceRequest) {
  * @param queryOrderRequest
  * @return
  */
-int UserBalanceService::queryOrder(QueryOrderRequest queryOrderRequest) {
+int UserBalanceService::queryOrder(string userId,string orderId) {
     cout << "queryOrder" << endl;
     return 0;
 }

@@ -29,15 +29,14 @@ class WalletServiceImpl final : public WalletService::Service {
     Status Charge(ServerContext* context, const wallet::ChargeRequest* request,
                   wallet::ChargeResponse* response) override {
         // todo...
-        ChargeRequest chargeRequest;
-        userBalanceService.charge(chargeRequest);
+        userBalanceService.charge(request->userId(),request->orderId(),request->amount());
+        response->set_orderId(request->orderId());
         return Status::OK;
     }
 
     Status Consume(ServerContext* context, const wallet::ConsumeRequest* request,
                    wallet::ConsumeResponse* response) override {
         // todo...
-        ConsumeRequest consumeRequest;
         userBalanceService.consume(consumeRequest);
         return Status::OK;
     }
@@ -45,7 +44,6 @@ class WalletServiceImpl final : public WalletService::Service {
     Status QueryBalance(ServerContext* context, const wallet::QueryBalanceRequest* request,
                       wallet::QueryBalanceResponse* response) override {
         // todo...
-        QueryBalanceRequest queryBalanceRequest;
         userBalanceService.queryBalance(queryBalanceRequest);
         return Status::OK;
     }
@@ -53,7 +51,6 @@ class WalletServiceImpl final : public WalletService::Service {
     Status QueryOrder(ServerContext* context, const wallet::QueryOrderRequest* request,
                       wallet::QueryOrderResponse* response) override {
         // todo...
-        QueryOrderRequest queryOrderRequest;
         userBalanceService.queryOrder(queryOrderRequest);
         return Status::OK;
     }

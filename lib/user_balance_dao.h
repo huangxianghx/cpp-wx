@@ -17,21 +17,22 @@ class UserBalanceDao {
 public:
     /**
      * 创建用户余额
-     * @param userBalance
+     * @param userId
      * @return
      */
-    bool createUserBalance(UserBalance userBalance);
+    bool createUserBalance(string userId);
     /**
      * 更新用户余额
-     * @param userBalance
+     * @param userId
+     * @param amount
      * @return
      */
-    int updateUserBalance(UserBalance userBalance);
+    bool updateUserBalance(String userId,double amount);
     /**
      * 查询用户余额
-     * @param userBalance
+     * @param userId
      * @return
      */
-    int queryUserBalance(UserBalance userBalance);
+    UserBalance queryUserBalance(string userId);
 };
 #endif //CPP_STUDY_USER_DAO_H

@@ -6,59 +6,37 @@
 #define CPP_STUDY_USER_SERVICE_H
 #include "user_balance_dao.h"
 
-/**
- * 充值请求
- */
-class ChargeRequest{
-
-};
-
-/**
- * 消费请求
- */
-class ConsumeRequest{
-
-};
-
-/**
- * 查询余额请求
- */
-class QueryBalanceRequest{
-
-};
-
-/**
- * 查询订单请求
- */
-class QueryOrderRequest{
-
-};
 
 class UserBalanceService {
 public:
     /**
      * 充值
-     * @param chargeRequest
+     * @param userId
+     * @param orderId
+     * @param amount
      * @return
      */
-    int charge(ChargeRequest chargeRequest);
+    int charge(string userId, string orderId, double amount);
     /**
      * 消费
-     * @param consumeRequest
+     * @param userId
+     * @param orderId
+     * @param amount
      * @return
      */
-    int consume(ConsumeRequest consumeRequest);
+    int consume(string userId, string orderId, double amount);
     /**
      * 查询余额
-     * @param queryBalanceRequest
+     * @param userId
      * @return
      */
-    int queryBalance(QueryBalanceRequest queryBalanceRequest);
+    int queryBalance(string userId);
     /**
      * 查询订单
-     * @param queryOrderRequest
+     * @param userId
+     * @param orderId
      * @return
      */
-    int queryOrder(QueryOrderRequest queryOrderRequest);
+    int queryOrder(string userId, string orderId);
 };
 #endif //CPP_STUDY_USER_SERVICE_H
