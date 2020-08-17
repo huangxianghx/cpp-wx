@@ -91,9 +91,6 @@ UserBalance UserBalanceDao::queryUserBalance(string userId) {
     cout << sql << endl;
     // 执行sql
     auto result = mysql_query(&mysql, sql);
-    if (!resule.isEmpty()) {
-//        result.fetch(userBalance.getUserId(),userBalance.getBalance(),userBalance.getVersion(),userBalance.getUpdateTime);
-    }
     // 关闭数据库连接
     closeMysqlConnect(&mysql);
     return userBalance;
