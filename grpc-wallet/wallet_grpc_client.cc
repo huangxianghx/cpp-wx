@@ -54,7 +54,7 @@ public:
 
         // Act upon its status.
         if (status.ok()) {
-            cout << response.orderId();
+            cout << response.orderid();
             return "RPC success";
         } else {
             std::cout << status.error_code() << ": " << status.error_message()
@@ -73,7 +73,6 @@ int main() {
     string target_str = "127.0.0.1:50051";
     WalletServiceClient walletServiceClient(grpc::CreateChannel(
             target_str, grpc::InsecureChannelCredentials()));
-    std::string user("world");
-    std::string reply = walletServiceClient.Charge(user);
+    std::string reply = walletServiceClient.Charge("userId","orderId",100);
     std::cout << "Hello received: " << reply << std::endl;
 }
