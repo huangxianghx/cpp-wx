@@ -4,24 +4,26 @@
 
 #ifndef CPP_WX_USER_BALANCE_MODEL_H
 #define CPP_WX_USER_BALANCE_MODEL_H
+#include <cstring>
+
 /**
  * 用户余额对象
  */
 class UserBalance{
 public:
-    std::string getUserId();
+    string getUserId();
     double getBalance();
     int getVersion();
-    std::string getUpdateTime();
-    void setUserId(std::string userId);
+    string getUpdateTime();
+    void setUserId(string userId);
     void setBalance(double balance);
     void setVersion(int version);
-    void setUpdateTime(std::string updateTime);
+    void setUpdateTime(string updateTime);
 
 private:
-    std::string userId;
+    string userId;
     double balance;
     int version;
-    std::string updateTime;
+    string updateTime;
 };
 #endif //CPP_WX_USER_BALANCE_MODEL_H
