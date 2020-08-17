@@ -99,7 +99,7 @@ UserBalance UserBalanceDao::queryUserBalance(string userId) {
        sql_row=mysql_fetch_row(res);
        userBalance.setUserId(sql_row[0]);
 //       userBalance.setBalance(sql_row[1]);
-       userBalance.setVersion(sql_row[2]);
+//       userBalance.setVersion(sql_row[2]);
        userBalance.setUpdateTime(sql_row[3]);
        return userBalance;
     }
