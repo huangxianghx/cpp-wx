@@ -17,6 +17,7 @@ using grpc::Server;
 using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
+using wallet::ChargeRequest;
 using wallet::ChargeResponse;
 using wallet::ConsumeRequest;
 using wallet::ConsumeResponse;
