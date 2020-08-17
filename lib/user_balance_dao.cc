@@ -94,7 +94,8 @@ UserBalance UserBalanceDao::queryUserBalance(string userId) {
     // 执行sql
     result = mysql_query(&mysql, sql);
     res = mysql_store_result(&mysql);
-    if(res){
+    if(!result){
+        cout << "query result" << sql_row[0] << endl;
        //获取具体的数据
        sql_row=mysql_fetch_row(res);
        userBalance.setUserId(sql_row[0]);
