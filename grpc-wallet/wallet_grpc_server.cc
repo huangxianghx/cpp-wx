@@ -29,28 +29,32 @@ class WalletServiceImpl final : public WalletService::Service {
     Status Charge(ServerContext* context, const wallet::ChargeRequest* request,
                   wallet::ChargeResponse* response) override {
         // todo...
-        userBalanceService.charge();
+        ChargeRequest chargeRequest;
+        userBalanceService.charge(chargeRequest);
         return Status::OK;
     }
 
     Status Consume(ServerContext* context, const wallet::ConsumeRequest* request,
                    wallet::ConsumeResponse* response) override {
         // todo...
-        userBalanceService.consume();
+        ConsumeRequest consumeRequest;
+        userBalanceService.consume(consumeRequest);
         return Status::OK;
     }
 
     Status QueryBalance(ServerContext* context, const wallet::QueryBalanceRequest* request,
                       wallet::QueryBalanceResponse* response) override {
         // todo...
-        userBalanceService.queryOrder();
+        QueryBalanceRequest queryBalanceRequest;
+        userBalanceService.queryBalance(queryBalanceRequest;
         return Status::OK;
     }
 
     Status QueryOrder(ServerContext* context, const wallet::QueryOrderRequest* request,
                       wallet::QueryOrderResponse* response) override {
         // todo...
-        userBalanceService.queryOrder();
+        QueryOrderRequest queryOrderRequest;
+        userBalanceService.queryOrder(queryOrderRequest);
         return Status::OK;
     }
 };

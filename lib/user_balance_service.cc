@@ -7,6 +7,7 @@
 
 using namespace std;
 
+UserBalanceDao userBalanceDao;
 /**
  * 充值
  * @param chargeRequest
