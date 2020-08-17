@@ -25,7 +25,7 @@ using helloworld::Greeter;
  * 定义类
  */
 class GreeterServiceImpl final : public Greeter::Service {
-public
+public:
     Status SayHello(ServerContext* context, const HelloRequest* request,
                     HelloReply* reply);
 };
