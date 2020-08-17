@@ -10,6 +10,7 @@ grpc_proto_library(
 cc_library(
     name = "greet_service",
     srcs = ["greet_service.cc"],
+    hdrs = ["greet_service.h"],
     deps = [
         ":helloworld_proto",
         '@com_github_grpc_grpc//:grpc++',
