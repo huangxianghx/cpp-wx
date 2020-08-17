@@ -2,6 +2,18 @@ syntax = "proto3";
 
 package wallet;
 
+// 钱包服务定义
+service WalletService {
+    // 充值
+    rpc Charge (ChargeRequest) returns (ChargeResponse) {}
+    // 消费
+    rpc Consume (ConsumeRequest) returns (ConsumeResponse) {}
+    // 查询订单详情
+    rpc QueryBalance (QueryBalanceRequest) returns (QueryBalanceResponse) {}
+    // 查询订单详情
+    rpc QueryOrder (QueryOrderRequest) returns (QueryOrderResponse) {}
+}
+
 // 公共请求
 message CommonRequest{
     string timestamp = 1;// 时间戳
@@ -71,14 +83,3 @@ message QueryOrderResponse{
     string orderTime = 6;// 订单时间
 }
 
-// 钱包服务定义
-service WalletService {
-    // 充值
-    rpc Charge (ChargeRequest) returns (ChargeResponse) {}
-    // 消费
-    rpc Consume (ConsumeRequest) returns (ConsumeResponse) {}
-    // 查询订单详情
-    rpc QueryBalance (QueryBalanceRequest) returns (QueryBalanceResponse) {}
-    // 查询订单详情
-    rpc QueryOrder (QueryOrderRequest) returns (QueryOrderResponse) {}
-}
