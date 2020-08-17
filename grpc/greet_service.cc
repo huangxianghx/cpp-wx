@@ -21,7 +21,7 @@ using helloworld::HelloReply;
 using helloworld::Greeter;
 
 Status SayHello(ServerContext* context, const HelloRequest* request,
-                HelloReply* reply) override{
+                HelloReply* reply){
     std::string prefix("Hello ");
     reply->set_message(prefix + request->name());
     return Status::OK;
