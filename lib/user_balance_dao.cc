@@ -96,9 +96,9 @@ UserBalance UserBalanceDao::queryUserBalance(string userId) {
     res = mysql_store_result(&mysql);
     if(res){
        //获取具体的数据
-       sql_row=mysql_fetch_row(result);
+       sql_row=mysql_fetch_row(res);
        userBalance.setUserId(sql_row[0]);
-       userBalance.setBalance(sql_row[1]);
+//       userBalance.setBalance(sql_row[1]);
        userBalance.setVersion(sql_row[2]);
        userBalance.setUpdateTime(sql_row[3]);
        return userBalance;
