@@ -27,22 +27,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="text">
-      <change afterPath="$PROJECT_DIR$/grpc-wallet/wallet.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpc-wallet/wallet_grpc_client.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-helloworld/BUILD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/grpc_client.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-helloworld/grpc_client.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/grpc_server.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-helloworld/grpc_server.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/helloworld.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-helloworld/helloworld.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BUILD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/user_dao.cc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_balance_dao.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/user_dao.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_balance_dao.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/user_service.cc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_balance_service.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/user_service.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_balance_service.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/BUILD" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-wallet/BUILD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/grpc_server.cc" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-wallet/wallet_grpc_server.cc" afterDir="false" />
-    </list>
+    <list default="true" id="f3877c0a-272d-49aa-8c5c-1d3c98aa77b7" name="Default Changelist" comment="text" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596458647646</updated>
-      <workItem from="1596458649256" duration="65021000" />
+      <workItem from="1596458649256" duration="65642000" />
     </task>
     <task id="LOCAL-00001" summary="text">
       <created>1597396701250</created>

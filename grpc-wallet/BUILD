@@ -12,7 +12,7 @@ cc_binary(
     srcs = ["wallet_grpc_server.cc"],
     deps = [
         ":wallet_proto",
-        "lib//:user_balance_service",
+        "//lib:user_balance_service",
         '@com_github_grpc_grpc//:grpc++',
         '@com_github_grpc_grpc//:grpc++_reflection',
     ],
