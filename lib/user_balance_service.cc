@@ -7,22 +7,45 @@
 
 using namespace std;
 
+// 创建dao服务
+UserBalanceDao userBalanceDao;
+
 /**
- * 注册用户
- * @param user
+ * 充值
+ * @param chargeRequest
  * @return
  */
-int UserBalanceService::charge() {
+int UserBalanceService::charge(ChargeRequest chargeRequest) {
     cout << "charge" <<endl;
     return 0;
 }
 
-int UserBalanceService::consume() {
+/**
+ * 消费
+ * @param consumeRequest
+ * @return
+ */
+int UserBalanceService::consume(ConsumeRequest consumeRequest) {
     cout << "consume" << endl;
     return 0;
 }
 
-int UserBalanceService::queryOrder() {
+/**
+ * 查询余额
+ * @param queryBalanceRequest
+ * @return
+ */
+int UserBalanceService::queryBalance(QueryBalanceRequest queryBalanceRequest) {
+    cout << "queryBalance" << endl;
+    return 0;
+}
+
+/**
+ * 查询订单
+ * @param queryOrderRequest
+ * @return
+ */
+int UserBalanceService::queryOrder(QueryOrderRequest queryOrderRequest) {
     cout << "queryOrder" << endl;
     return 0;
 }

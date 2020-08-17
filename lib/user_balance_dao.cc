@@ -1,41 +1,12 @@
 //
 // Created by 黄湘 on 2020/7/26.
 //
-
-
-
 #include <iostream>
 #include <cstdio>
 #include "user_balance_dao.h"
 #include "mysql_connect.h"
 
 using namespace std;
-
-
-string User::getUserName() {
-    return _userName;
-}
-
-string User::getLoginNo() {
-    return _loginNo;
-}
-
-string User::getPassword() {
-    return _password;
-}
-
-void User::setUserName(string userName) {
-    _userName = userName;
-}
-
-void User::setLoginNo(string loginNo) {
-    _loginNo = loginNo;
-}
-
-void User::setPassword(string password) {
-    _password = password;
-}
-
 
 MYSQL mysql ;
 //行的一个查询结果集
@@ -47,12 +18,11 @@ int result;
 
 
 /**
- * 判断用户是否已存在
+ * 创建用户余额
  * @param mysql
  * @param user
  */
-bool UserDao::isUserExit(User user){
-
+bool UserBalanceDao::createUserBalance(UserBalance userBalance){
     // 初始化mysql连接
     initMysqlConnect(&mysql);
     // 判断用户是否已存在
@@ -70,7 +40,33 @@ bool UserDao::isUserExit(User user){
     }
 }
 
-int UserDao::insertUser(User user) {
+/**
+ * 更新用户余额
+ * @param userBalance
+ * @return
+ */
+int UserBalanceDao::updateUserBalance(UserBalance userBalance) {
+    // 初始化mysql连接
+    initMysqlConnect(&mysql);
+    // 拼接sql语句
+    sprintf(sql,"insert into user (user_name,login_no,password) values ('%s','%s','%s')",user.getUserName().c_str(),user.getLoginNo().c_str(),user.getPassword().c_str());
+    cout << sql << endl;
+    // 执行sql
+    result = mysql_query(&mysql,sql);
+    if(result!=0){
+        cout<< "insert fail" << mysql_error(&mysql) << endl;
+    }
+    // 关闭数据库连接
+    closeMysqlConnect(&mysql);
+    return 0;
+}
+
+/**
+ * 查询用户余额
+ * @param userBalance
+ * @return
+ */
+int UserBalanceDao::queryUserBalance(UserBalance userBalance) {
     // 初始化mysql连接
     initMysqlConnect(&mysql);
     // 拼接sql语句

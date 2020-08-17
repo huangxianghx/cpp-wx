@@ -6,36 +6,32 @@
 #define CPP_STUDY_USER_DAO_H
 
 #include <cstring>
+#include <user_balance_model.h>
 
 using namespace std;
-class User{
-public:
-    string getUserName();
-    string getLoginNo();
-    string getPassword();
-    void setUserName(string userName);
-    void setLoginNo(string loginNo);
-    void setPassword(string password);
 
-private:
-    string _loginNo;
-    string _userName;
-    string _password;
-};
-
-class UserDao {
+/**
+ * 数据库操作
+ */
+class UserBalanceDao {
 public:
     /**
-     * 新增用户
-     * @param user
+     * 创建用户余额
+     * @param userBalance
      * @return
      */
-    int insertUser(User user);
+    bool createUserBalance(UserBalance userBalance);
     /**
-     * 查询用户是否存在
-     * @param user
+     * 更新用户余额
+     * @param userBalance
      * @return
      */
-    bool isUserExit(User user);
+    int updateUserBalance(UserBalance userBalance);
+    /**
+     * 查询用户余额
+     * @param userBalance
+     * @return
+     */
+    int queryUserBalance(UserBalance userBalance);
 };
 #endif //CPP_STUDY_USER_DAO_H

@@ -40,6 +40,13 @@ class WalletServiceImpl final : public WalletService::Service {
         return Status::OK;
     }
 
+    Status QueryBalance(ServerContext* context, const wallet::QueryBalanceRequest* request,
+                      wallet::QueryBalanceResponse* response) override {
+        // todo...
+        userBalanceService.queryOrder();
+        return Status::OK;
+    }
+
     Status QueryOrder(ServerContext* context, const wallet::QueryOrderRequest* request,
                       wallet::QueryOrderResponse* response) override {
         // todo...
