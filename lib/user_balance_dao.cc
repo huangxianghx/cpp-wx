@@ -11,6 +11,8 @@ using namespace std;
 MYSQL mysql;
 //行的一个查询结果集
 MYSQL_RES *res;
+//存放一行查询结果的字符串数组
+MYSQL_ROW sql_row;
 // sql 语句
 char sql[150];
 // sql 执行结果
@@ -90,9 +92,18 @@ UserBalance UserBalanceDao::queryUserBalance(string userId) {
     sprintf(sql, "select user_id,balance,version,update_time from user_balance where user_id = '%s';", userId.c_str());
     cout << sql << endl;
     // 执行sql
-    auto result = mysql_query(&mysql, sql);
-    // 关闭数据库连接
-    closeMysqlConnect(&mysql);
+    result = mysql_query(&mysql, sql);
+    res = mysql_store_result(&mysql);
+    if(res){
+       //获取具体的数据
+       sql_row=mysql_fetch_row(result);
+       userBalance.setUserId(sql_row[0]);
+       userBalance.setBalance(sql_row[1]);
+       userBalance.setVersion(sql_row[2]);
+       userBalance.setUpdateTime(sql_row[3]);
+       return userBalance;
+    }
+
     return userBalance;
 }
 

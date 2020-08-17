@@ -18,6 +18,9 @@ int UserBalanceService::charge(string userId, string orderId, double amount) {
     cout << userId << endl;
     cout << orderId << endl;
     cout << amount << endl;
+    //1、判断用户余额账户是否存在，如果不存在的话，创建对应的账户
+    UserBalance userBalance = userBalanceDao.queryUserBalance(userId);
+    cout << userBalance.getUserId() << endl;
     return 0;
 }
 
