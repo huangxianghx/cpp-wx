@@ -21,7 +21,7 @@ using helloworld::HelloReply;
 using helloworld::Greeter;
 
 /**
- * grpc stub
+ * 声明grpc stub
  */
 class GreeterServiceImpl final : public Greeter::Service {
     Status SayHello(ServerContext* context, const HelloRequest* request,
@@ -33,6 +33,9 @@ class GreeterServiceImpl final : public Greeter::Service {
 };
 
 
+/**
+ * 启动grpc服务端
+ */
 void RunServer() {
     std::string server_address("127.0.0.1:50051");
     GreeterServiceImpl service;

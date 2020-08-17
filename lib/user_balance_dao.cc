@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include <cstdio>
-#include "user_dao.h"
+#include "user_balance_dao.h"
 #include "mysql_connect.h"
 
 using namespace std;

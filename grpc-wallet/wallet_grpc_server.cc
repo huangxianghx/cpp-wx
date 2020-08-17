@@ -1,7 +1,7 @@
 //
 // Created by 黄湘 on 2020/7/25.
 //
-#include<iostream>
+#include <iostream>
 #include <memory>
 #include <string>
 
@@ -9,19 +9,58 @@
 #include <grpcpp/health_check_service_interface.h>
 #include <grpcpp/ext/proto_server_reflection_plugin.h>
 
-#include "grpc/greet_service.cc"
+#include "grpc-wallet/wallet.grpc.pb.h"
+#include "lib/user_balance_service.h"
 
 
 using grpc::Server;
 using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
+using wallet::ChargeRequest;
+using wallet::ChargeResponse;
+using wallet::ConsumeRequest;
+using wallet::ConsumeResponse;
+using wallet::QueryOrderRequest;
+using wallet::QueryOrderResponse;
+using wallet::WalletService;
+
+/**
+ * 声明grpc stub
+ */
+class WalletServiceImpl final : public WalletService::Service {
+    UserBalanceService userBalanceService;
+
+    Status Charge(ServerContext* context, const ChargeRequest* request,
+                  ChargeResponse* reply) override {
+        // todo...
+        userBalanceService.charge();
+        return Status::OK;
+    }
+
+    Status Consume(ServerContext* context, const ConsumeRequest* request,
+                   ConsumeResponse* reply) override {
+        // todo...
+        userBalanceService.consume();
+        return Status::OK;
+    }
+
+    Status QueryOrder(ServerContext* context, const QueryOrderRequest* request,
+                      QueryOrderResponse* reply) override {
+        // todo...
+        userBalanceService.queryOrder();
+        return Status::OK;
+    }
+};
 
 
-
+/**
+ * 启动grpc服务端
+ */
 void RunServer() {
     std::string server_address("127.0.0.1:50051");
-    GreeterServiceImpl service;
+    // 定义服务
+    WalletServiceImpl service;
 
     grpc::EnableDefaultHealthCheckService(true);
     grpc::reflection::InitProtoReflectionServerBuilderPlugin();
@@ -42,7 +81,6 @@ void RunServer() {
 
 int main(int argc, char** argv) {
     RunServer();
-
     return 0;
 }
 

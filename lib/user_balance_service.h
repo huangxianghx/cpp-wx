@@ -4,21 +4,31 @@
 
 #ifndef CPP_STUDY_USER_SERVICE_H
 #define CPP_STUDY_USER_SERVICE_H
-#include "user_dao.h";
+#include "user_balance_dao.h";
 
-class UserService {
+struct ChargeRequest{
+
+};
+
+class UserBalanceService {
 public:
     /**
-     * 注册用户
+     * 充值
      * @param user
      * @return
      */
-    int registerUser(User user);
+    int charge();
     /**
-     * 用户登录
+     * 消费
      * @param user
      * @return
      */
-    int login(User user);
+    int consume();
+    /**
+     * 查询订单
+     * @param user
+     * @return
+     */
+    int queryOrder();
 };
 #endif //CPP_STUDY_USER_SERVICE_H

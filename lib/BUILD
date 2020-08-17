@@ -2,10 +2,10 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 
 # 定义库
 cc_library(
-    name = "user_service",
-    srcs = ["user_service.cc","user_dao.cc","mysql_connect.cc"],
-    hdrs = ["user_service.h","user_dao.h","mysql_connect.h"],
+    name = "user_balance_service",
+    srcs = ["user_balance_service.cc","user_balance_dao.cc","mysql_connect.cc"],
+    hdrs = ["user_balance_service.h","user_balance_dao.h","mysql_connect.h"],
     deps = ["@usr//:mysql_build"],
-    visibility = ["//main:__pkg__"],
+    visibility = ["//visibility:public"]
 )
 

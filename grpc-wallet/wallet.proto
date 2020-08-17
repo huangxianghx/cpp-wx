@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package wallet;
+
+// 公共请求
+message CommonRequest{
+    string timestamp = 1;// 时间戳
+}
+
+// 公共响应
+message CommonResponse{
+    string code = 1;// 响应码
+    string message = 2;// 响应描述
+}
+
+// 充值请求
+message ChargeRequest{
+    CommonRequest commonRequest = 1;// 公共请求
+    string userId = 2;// 用户id
+    double amount = 3;// 充值金额
+    string orderId = 4;// 订单号
+}
+
+// 充值响应
+message ChargeResponse{
+    CommonResponse commonResponse = 1;// 公共响应
+    string orderId = 2;// 订单号
+}
+
+// 消费请求
+message ConsumeRequest{
+    CommonRequest commonRequest = 1;// 公共请求
+    string userId = 2;// 用户id
+    double amount = 3;// 充值金额
+    string orderId = 4;// 订单号
+}
+
+// 充值响应
+message ConsumeResponse{
+    CommonResponse commonResponse = 1;// 公共响应
+    string orderId = 2;// 订单号
+}
+
+// 查询订单
+message QueryOrderRequest{
+    CommonRequest commonRequest = 1;// 公共请求
+    string userId = 2;// 用户id
+    string orderId = 3;// 订单号
+}
+
+// 充值响应
+message QueryOrderResponse{
+    CommonResponse commonResponse = 1;// 公共响应
+    string userId = 2;// 用户id
+    string orderId = 3;// 订单号
+    string orderStatus = 4;// 订单状态
+    string orderType = 5;// 订单类型
+    string orderTime = 6;// 订单时间
+}
+
+// 钱包服务定义
+service WalletService {
+    // 充值
+    rpc Charge (ChargeRequest) returns (ChargeResponse) {}
+    // 消费
+    rpc Consume (ConsumeRequest) returns (ConsumeResponse) {}
+    // 查询订单详情
+    rpc QueryOrder (QueryOrderRequest) returns (QueryOrderResponse) {}
+}
