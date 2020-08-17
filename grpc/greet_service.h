@@ -12,6 +12,7 @@
 
 #include "grpc/helloworld.grpc.pb.h"
 
+using grpc::ServerContext;
 using grpc::Status;
 using helloworld::HelloRequest;
 using helloworld::HelloReply;
