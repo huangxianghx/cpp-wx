@@ -26,7 +26,7 @@ bool UserBalanceDao::createUserBalance(UserBalance userBalance){
     // 初始化mysql连接
     initMysqlConnect(&mysql);
     // 判断用户是否已存在
-    sprintf(sql,"select * from user where login_no = '%s';",user.getLoginNo().c_str());
+    sprintf(sql,"select * from user where login_no = '%s';",userBalance.getUserId().c_str());
     cout << sql << endl;
     result = mysql_query(&mysql,sql);
     res = mysql_store_result(&mysql);
@@ -49,7 +49,7 @@ int UserBalanceDao::updateUserBalance(UserBalance userBalance) {
     // 初始化mysql连接
     initMysqlConnect(&mysql);
     // 拼接sql语句
-    sprintf(sql,"insert into user (user_name,login_no,password) values ('%s','%s','%s')",user.getUserName().c_str(),user.getLoginNo().c_str(),user.getPassword().c_str());
+    sprintf(sql,"select * from user where login_no = '%s';",userBalance.getUserId().c_str());
     cout << sql << endl;
     // 执行sql
     result = mysql_query(&mysql,sql);
@@ -70,7 +70,7 @@ int UserBalanceDao::queryUserBalance(UserBalance userBalance) {
     // 初始化mysql连接
     initMysqlConnect(&mysql);
     // 拼接sql语句
-    sprintf(sql,"insert into user (user_name,login_no,password) values ('%s','%s','%s')",user.getUserName().c_str(),user.getLoginNo().c_str(),user.getPassword().c_str());
+    sprintf(sql,"select * from user where login_no = '%s';",userBalance.getUserId().c_str());
     cout << sql << endl;
     // 执行sql
     result = mysql_query(&mysql,sql);
