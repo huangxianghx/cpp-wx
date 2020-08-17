@@ -13,47 +13,45 @@
 #include<unistd.h>
 #include<iostream>
 #include <grpcpp/grpcpp.h>
-#include "grpc/helloworld.grpc.pb.h"
+#include "grpc-wallet/wallet.grpc.pb.h"
 
 
 using namespace std;
 using grpc::Channel;
 using grpc::ClientContext;
 using grpc::Status;
-using helloworld::HelloRequest;
-using helloworld::HelloReply;
-using helloworld::Greeter;
+using wallet::WalletService;
+
 
 int socket_fd;
 
 /**
  * grpc调用封装
  */
-class GreeterClient {
+class WalletServiceClient {
 public:
-    GreeterClient(std::shared_ptr<Channel> channel)
-            : stub_(Greeter::NewStub(channel)) {}
+    WalletServiceClient(std::shared_ptr<Channel> channel)
+            : stub_(WalletService::NewStub(channel)) {}
 
     // Assembles the client's payload, sends it and presents the response back
     // from the server.
-    std::string SayHello(const std::string& user) {
+    std::string Charge(const std::string& user) {
         // Data we are sending to the server.
-        HelloRequest request;
-        request.set_name(user);
+        wallet::ChargeRequest request;
 
         // Container for the data we expect from the server.
-        HelloReply reply;
+        ChargeResponse response;
 
         // Context for the client. It could be used to convey extra information to
         // the server and/or tweak certain RPC behaviors.
         ClientContext context;
 
         // The actual RPC.
-        Status status = stub_->SayHello(&context, request, &reply);
+        Status status = stub_->Charge(&context, request, &response);
 
         // Act upon its status.
         if (status.ok()) {
-            return reply.message();
+            return "RPC success";
         } else {
             std::cout << status.error_code() << ": " << status.error_message()
                       << std::endl;
@@ -62,16 +60,16 @@ public:
     }
 
 private:
-    std::unique_ptr<Greeter::Stub> stub_;
+    std::unique_ptr<WalletService::Stub> stub_;
 };
 
 
 int main() {
     // grpc调用
     string target_str = "127.0.0.1:50051";
-    GreeterClient greeterClient(grpc::CreateChannel(
+    WalletServiceClient walletServiceClient(grpc::CreateChannel(
             target_str, grpc::InsecureChannelCredentials()));
     std::string user("world");
-    std::string reply = greeterClient.SayHello(user);
+    std::string reply = walletServiceClient.Charge(user);
     std::cout << "Hello received: " << reply << std::endl;
 }
